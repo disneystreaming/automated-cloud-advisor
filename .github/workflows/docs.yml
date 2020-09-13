@@ -16,11 +16,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12"
+
       - name: Change directroy
         run: cd website
 
       - name: Install
         run: npm ci
 
-      - name: Lint
-        run: npm run publish-gh-pages
+      - name: publish
+        run: pwd && npm run publish-gh-pages
