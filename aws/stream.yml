@@ -1,0 +1,232 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Stream Infrastructure
+Parameters:
+    ResourcePrefix:
+        Type: String
+        Description: Prefix that will be added to all resources
+    ResourceName:
+        Type: String
+        Description: Name that will be added to all resources
+    S3Bucket:
+        Type: String
+        Description: S3 bucket reference
+    S3KeyStream:
+        Type: String
+        Description: S3 key reference
+    StreamARN:
+        Type: String
+        Description: Stream ARN from the DynamoDB Index Table
+    # Stream
+    BatchSize:
+        Type: Number
+        Description: Batch size of events that will trigger the Lambda
+        Default: 50
+    # VPC
+    SecurityGroupIdsLambda:
+        Type: CommaDelimitedList
+        Description: List of Security Group Ids for Lambda
+    SecurityGroupIdsES:
+        Type: CommaDelimitedList
+        Description: List of Security Group Ids for Elastic Search
+    SubnetIds:
+        Type: CommaDelimitedList
+        Description: List of SubnetIds
+    # Elastic Search
+    Index:
+        Type: String
+        Description: ElasticSearch Index
+        Default: trusted-advisor
+    ElasticsearchVersion:
+        Type: Number
+        Description: ElasticSearch version
+        Default: 7.7
+    DedicatedMasterType:
+        Type: String
+        Description: Dedicated Master type
+        Default: r5.large.elasticsearch
+    DedicatedMasterCount:
+        Type: Number
+        Description: Number of dedicated master nodes
+        Default: 3
+    InstanceType:
+        Type: String
+        Description: Instance type
+        Default: r5.large.elasticsearch
+    InstanceCount:
+        Type: Number
+        Description: Number of instances
+        Default: 2
+    # EBS
+    Iops:
+        Type: Number
+        Description: Iops
+        Default: 0
+    VolumeType:
+        Type: String
+        Description: Volume Type
+        Default: gp2
+    VolumeSize:
+        Type: Number
+        Description: Volume size of EBS
+        Default: 20
+
+Resources:
+    Policy:
+        Type: AWS::IAM::ManagedPolicy
+        Properties:
+            ManagedPolicyName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Policy that will allow the lambda to perform aws actions
+            PolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                    - 
+                        Effect: Allow
+                        Action:
+                            - logs:CreateLogGroup
+                            - logs:CreateLogStream
+                            - logs:PutLogEvents
+                        Resource: '*'
+                    -
+                        Effect: Allow
+                        Action:
+                            - dynamodb:DescribeStream
+                            - dynamodb:GetRecords
+                            - dynamodb:DescribeStream
+                            - dynamodb:GetShardIterator
+                        Resource: '*'
+                    -
+                        Effect: Allow
+                        Action:
+                            - es:ESHttpPut
+                            - es:ESHttpDelete
+                        Resource: '*'
+                    -
+                        Effect: Allow
+                        Action:
+                            - ec2:CreateNetworkInterface
+                            - ec2:DeleteNetworkInterface
+                            - ec2:DescribeNetworkInterfaces
+                        Resource: '*'
+                    -
+                        Effect: Allow
+                        Action:
+                            - kms:Decrypt
+                        Resource: '*'
+    Role:
+        Type: AWS::IAM::Role
+        DependsOn: Policy
+        Properties:
+            RoleName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Allows lambda to refresh trusted advisor
+            AssumeRolePolicyDocument:
+                Version: '2012-10-17'
+                Statement:
+                  - Effect: Allow
+                    Principal:
+                      Service:
+                        - lambda.amazonaws.com
+                    Action:
+                      - sts:AssumeRole
+            
+            ManagedPolicyArns: 
+              - !Ref Policy
+    ElasticSearch:
+        Type: AWS::Elasticsearch::Domain
+        DependsOn: Role
+        Properties: 
+            ElasticsearchVersion: !Ref ElasticsearchVersion
+            ElasticsearchClusterConfig:
+                DedicatedMasterEnabled: true
+                InstanceCount: !Ref InstanceCount
+                ZoneAwarenessEnabled: true
+                InstanceType: !Ref InstanceType
+                DedicatedMasterType: !Ref DedicatedMasterType
+                DedicatedMasterCount: !Ref DedicatedMasterCount
+            EBSOptions:
+                EBSEnabled: true
+                Iops: !Ref Iops
+                VolumeSize: !Ref VolumeSize
+                VolumeType: !Ref VolumeType
+            SnapshotOptions:
+                AutomatedSnapshotStartHour: 0
+            AccessPolicies:
+                Version: 2012-10-17
+                Statement:
+                    -
+                        Effect: Allow
+                        Principal:
+                            AWS: '*'
+                        Action: '*'
+                        Resource: '*'
+            AdvancedOptions:
+                rest.action.multi.allow_explicit_index: true
+            VPCOptions: 
+                SubnetIds: !Ref SubnetIds
+                SecurityGroupIds: !Ref SecurityGroupIdsES
+    Lambda:
+        Type: AWS::Lambda::Function
+        DependsOn: ElasticSearch
+        Properties:
+            FunctionName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Lambda that will handle an event triggered by DynamoDB Stream.
+            Runtime: nodejs12.x
+            Role: !GetAtt Role.Arn
+            Handler: stream.handler
+            Timeout: 10
+            VpcConfig:
+                SecurityGroupIds: !Ref SecurityGroupIdsLambda
+                SubnetIds: !Ref SubnetIds
+            Environment:
+                Variables:
+                    DOMAIN: !GetAtt ElasticSearch.DomainEndpoint
+                    INDEX: !Ref Index
+                    REGION: us-east-1
+                    TYPE: _doc
+            Code:
+                S3Bucket: !Ref S3Bucket
+                S3Key: !Ref S3KeyStream
+    LambdaStream:
+        Type: AWS::Lambda::EventSourceMapping
+        DependsOn: Lambda
+        Properties:
+            BatchSize: !Ref BatchSize
+            Enabled: true
+            EventSourceArn:
+                Fn::ImportValue:
+                    !Sub '${StreamARN}'
+            FunctionName: !GetAtt Lambda.Arn
+            StartingPosition: LATEST
+Outputs:
+    PolicyArn:
+        Description: Policy Arn
+        Value: !Ref Policy
+    RoleName:
+        Description: Role Name
+        Value: !Ref Role
+    RoleArn:
+        Description: Role Arn
+        Value: !GetAtt Role.Arn
+    RoleId:
+        Description: Role Id
+        Value: !GetAtt Role.RoleId
+    ElasticSearchId:
+        Description: ElasticSearch Id
+        Value: !Ref ElasticSearch
+    ElasticSearchArn:
+        Description: ElasticSearch Arn
+        Value: !GetAtt ElasticSearch.Arn
+    ElasticSearchDomainArn:
+        Description: ElasticSearch Domain Arn
+        Value: !GetAtt ElasticSearch.DomainArn
+    ElasticSearchDomainEndpoint:
+        Description: ElasticSearch Domain Endpoint
+        Value: !GetAtt ElasticSearch.DomainEndpoint
+    LambdaName:
+        Description: Lambda Name
+        Value: !Ref Lambda
+    LambdaArn:
+        Description: Lambda Arn
+        Value: !GetAtt Lambda.Arn
+    Kibana:
+        Description: Kibana Endpoint
+        Value: !Sub 'https://${ElasticSearch.DomainEndpoint}/_plugin/kibana/'

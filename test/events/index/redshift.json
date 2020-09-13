@@ -1,0 +1,24 @@
+{
+  "version": "0",
+  "id": "281afbc7-8bbe-195b-e61e-f021b337286d",
+  "detail-type": "Trusted Advisor Check Item Refresh Notification",
+  "source": "aws.trustedadvisor",
+  "account": "123456789012",
+  "time": "2020-02-25T19:50:18Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "check-name": "Underutilized Amazon Redshift Clusters",
+    "check-item-detail": {
+      "Status": "Yellow",
+      "Instance Type": "ds2.xlarge",
+      "Region": "us-east-1",
+      "Cluster": "example",
+      "Estimated Monthly Savings": "684.0",
+      "Reason": "No database connections in past 7 days"
+    },
+    "status": "WARN",
+    "resource_id": "arn:aws:redshift:us-east-1:123456789012:cluster:example",
+    "uuid": "877f0255-6a50-4e16-8aeb-64454dc851d2"
+  }
+}

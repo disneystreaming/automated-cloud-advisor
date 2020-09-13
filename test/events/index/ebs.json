@@ -1,0 +1,27 @@
+{
+  "version": "0",
+  "id": "04afacef-27a3-954c-d0cb-3dc0781efcb8",
+  "detail-type": "Trusted Advisor Check Item Refresh Notification",
+  "source": "aws.trustedadvisor",
+  "account": "123456789012",
+  "time": "2020-02-25T20:00:01Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "check-name": "Underutilized Amazon EBS Volumes",
+    "check-item-detail": {
+      "Volume Type": "General purpose(SSD)",
+      "Volume ID": "vol-123456789012",
+      "Volume Size": "25",
+      "Snapshot Name": null,
+      "Region": "us-east-1",
+      "Snapshot ID": null,
+      "Monthly Storage Cost": "$2.50",
+      "Volume Name": null,
+      "Snapshot Age": null
+    },
+    "status": "WARN",
+    "resource_id": "arn:aws:ec2:us-east-1:123456789012:volume/vol-123456789012",
+    "uuid": "44188d4d-5659-42d3-8b10-72ed7b7ce441"
+  }
+}

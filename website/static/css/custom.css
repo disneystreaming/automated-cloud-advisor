@@ -1,0 +1,28 @@
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+.imageAlignTop .blockImage {
+    margin-bottom: 20px;
+    max-width: 350px;
+}
+.homeContainer .homeWrapper {
+  padding: 1em 5px;
+}
+.nav-footer {
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+}
+.nav-footer .fbOpenSource {
+  margin: 0 auto;
+}

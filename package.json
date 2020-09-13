@@ -1,0 +1,70 @@
+{
+  "name": "automated-cloud-advisor",
+  "version": "1.0.414",
+  "author": "ayyaz.akhtar@disneystreaming.com",
+  "description": "Automated Cloud Custodial Service",
+  "repository": {
+    "type": "git",
+    "url": "git@github.co.:disneystreaming/automated-cloud-advisor.git"
+  },
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "tag": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git push && git push --tags",
+    "lint": "eslint . --fix",
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "^2.673.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-jest": "^23.10.0",
+    "eslint-plugin-react": "^7.19.0",
+    "inquirer": "^7.2.0",
+    "jest": "^26.0.1",
+    "lint": "^0.7.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "plugins": [
+      "jest",
+      "react"
+    ],
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest/globals": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "react/jsx-uses-vars": "error",
+      "react/jsx-uses-react": "error"
+    }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "silent": true,
+    "projects": [
+      "src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}

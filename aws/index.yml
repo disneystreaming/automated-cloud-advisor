@@ -1,0 +1,161 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Index Infrastructure
+Parameters:
+    ResourcePrefix:
+        Type: String
+        Description: Prefix that will be added to all resources
+    ResourceName:
+        Type: String
+        Description: Name that will be added to all resources
+    S3Bucket:
+        Type: String
+        Description: S3 bucket reference
+    S3KeyIndex:
+        Type: String
+        Description: S3 key reference
+
+Resources:
+    Policy:
+        Type: AWS::IAM::ManagedPolicy
+        Properties:
+            ManagedPolicyName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Policy that will allow the lambda to perform aws actions
+            PolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                    - 
+                        Effect: Allow
+                        Action:
+                            - logs:CreateLogGroup
+                            - logs:CreateLogStream
+                            - logs:PutLogEvents
+                        Resource: '*'
+                    -
+                        Effect: Allow
+                        Action:
+                            - dynamodb:PutItem
+                        Resource: '*'
+                    -
+                        Effect: Allow
+                        Action:
+                            - kms:Decrypt
+                        Resource: '*'
+    Role:
+        Type: AWS::IAM::Role
+        DependsOn: Policy
+        Properties:
+            RoleName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Allows lambda to upsert to DynamoDB
+            AssumeRolePolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                  - Effect: Allow
+                    Principal:
+                      Service:
+                        - lambda.amazonaws.com
+                    Action:
+                      - sts:AssumeRole
+            ManagedPolicyArns: 
+              - !Ref Policy
+    Lambda:
+        Type: AWS::Lambda::Function
+        DependsOn: Role
+        Properties:
+            FunctionName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Lambda that will handle an event triggered by a pattern based CloudWatch.
+            Runtime: nodejs12.x
+            Role: !GetAtt Role.Arn
+            Handler: index.handler
+            Environment:
+                Variables:
+                    DB_NAME: !Sub '${ResourcePrefix}-${ResourceName}'
+            Code:
+                S3Bucket: !Ref S3Bucket
+                S3Key: !Ref S3KeyIndex
+    Rule: 
+        Type: AWS::Events::Rule
+        DependsOn: Lambda
+        Properties:
+            Name: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Pattern Based Rule to trigger lambda
+            EventPattern:
+                source:
+                  - aws.trustedadvisor
+                detail-type:
+                  - Trusted Advisor Check Item Refresh Notification
+                detail:
+                    status:
+                        - WARN
+                    check-name:
+                        - Amazon RDS Idle DB Instances
+                        - Low Utilization Amazon EC2 Instances
+                        - Underutilized Amazon EBS Volumes
+                        - Unassociated Elastic IP Addresses
+                        - Idle Load Balancers
+                        - Underutilized Amazon Redshift Clusters
+            State: ENABLED
+            Targets:
+                -
+                    Arn: !GetAtt Lambda.Arn
+                    Id: !Ref Lambda
+    PermissionForEventsToInvokeLambda: 
+        Type: AWS::Lambda::Permission
+        DependsOn: Rule
+        Properties: 
+            FunctionName: !Ref Lambda
+            Action: lambda:InvokeFunction
+            Principal: events.amazonaws.com
+            SourceArn: !GetAtt Rule.Arn
+    DynamoDB:
+        Type: AWS::DynamoDB::Table
+        DependsOn: PermissionForEventsToInvokeLambda
+        Properties:
+            TableName: !Sub '${ResourcePrefix}-${ResourceName}'
+            AttributeDefinitions:
+                -
+                    AttributeName: id
+                    AttributeType: S
+            BillingMode: PAY_PER_REQUEST
+            KeySchema:
+                -
+                    AttributeName: id
+                    KeyType: HASH
+            StreamSpecification:
+                StreamViewType: NEW_IMAGE
+            TimeToLiveSpecification:
+                AttributeName: ttl
+                Enabled: true
+
+Outputs:
+    PolicyArn:
+        Description: Policy Arn
+        Value: !Ref Policy
+    RoleName:
+        Description: Role Name
+        Value: !Ref Role
+    RoleArn:
+        Description: Role Arn
+        Value: !GetAtt Role.Arn
+    RoleId:
+        Description: Role Id
+        Value: !GetAtt Role.RoleId
+    LambdaName:
+        Description: Lambda Name
+        Value: !Ref Lambda
+    LambdaArn:
+        Description: Lambda Arn
+        Value: !GetAtt Lambda.Arn
+    RuleArn:
+        Description: Rule Arn
+        Value: !GetAtt Rule.Arn
+    DynamoDBName:
+        Description: DynamoDB Name
+        Value: !Ref DynamoDB
+    DynamoDBArn:
+        Description: DynamoDB Arn
+        Value: !GetAtt DynamoDB.Arn
+    DynamoDBStreamArn:
+        Description: DynamoDB Stream Arn
+        Value: !GetAtt DynamoDB.StreamArn
+        Export:
+            Name: !Sub '${AWS::StackName}-StreamArn'
