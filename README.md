@@ -9,15 +9,13 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![CLA assistant](https://cla-assistant.io/readme/badge/disneystreaming/automated-cloud-advisor)](https://cla-assistant.io/disneystreaming/automated-cloud-advisor)
-
-
 [![npm](https://img.shields.io/npm/v/automated-cloud-advisor)](https://www.npmjs.com/package/automated-cloud-advisor)
 [![dependencies Status](https://david-dm.org/disneystreaming/automated-cloud-advisor/status.svg)](https://david-dm.org/disneystreaming/automated-cloud-advisor)
 [![devDependencies Status](https://david-dm.org/disneystreaming/automated-cloud-advisor/dev-status.svg)](https://david-dm.org/disneystreaming/automated-cloud-advisor?type=dev)
 
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CLA assistant](https://cla-assistant.io/readme/badge/disneystreaming/automated-cloud-advisor)](https://cla-assistant.io/disneystreaming/automated-cloud-advisor)
 [![Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/disneystreaming/automated-cloud-advisor)
 
 # Automated-Cloud-Advisor
