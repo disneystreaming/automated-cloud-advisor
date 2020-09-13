@@ -2,7 +2,7 @@
   "name": "automated-cloud-advisor",
   "version": "0.0.1",
   "author": "ayyaz.akhtar@disneystreaming.com",
-  "description": "Automated Cloud Custodial Service",
+  "description": "Automated Cloud Advisor",
   "repository": {
     "type": "git",
     "url": "git@github.co.:disneystreaming/automated-cloud-advisor.git"
