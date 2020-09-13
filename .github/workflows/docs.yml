@@ -13,11 +13,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v1
+      - name: Node Setup
+        uses: actions/setup-node@v1
         with:
           node-version: "12"
 
-     - name: Add key to allow access to repository
+      - name: Add key to allow access to repository
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
