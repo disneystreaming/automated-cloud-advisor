@@ -1,17 +1,17 @@
-const React = require('react');
+const React = require('react')
 
-const CompLibrary = require('../../core/CompLibrary.js');
+const CompLibrary = require('../../core/CompLibrary.js')
 
-const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
+const Container = CompLibrary.Container
+const GridBlock = CompLibrary.GridBlock
 
 class HomeSplash extends React.Component {
-  render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
-    const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
+  render () {
+    const { siteConfig, language = '' } = this.props
+    const { baseUrl, docsUrl } = siteConfig
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`
+    const langPart = `${language ? `${language}/` : ''}`
+    const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`
 
     const SplashContainer = props => (
       <div className="homeContainer">
@@ -19,14 +19,14 @@ class HomeSplash extends React.Component {
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
       </div>
-    );
+    )
 
     const ProjectTitle = props => (
       <h2 className="projectTitle">
         {props.title}
         <small>{props.tagline}</small>
       </h2>
-    );
+    )
 
     const PromoSection = props => (
       <div className="section promoSection">
@@ -34,7 +34,7 @@ class HomeSplash extends React.Component {
           <div className="pluginRowBlock">{props.children}</div>
         </div>
       </div>
-    );
+    )
 
     const Button = props => (
       <div className="pluginWrapper buttonWrapper">
@@ -42,7 +42,7 @@ class HomeSplash extends React.Component {
           {props.children}
         </a>
       </div>
-    );
+    )
 
     return (
       <SplashContainer>
@@ -53,14 +53,14 @@ class HomeSplash extends React.Component {
           </PromoSection>
         </div>
       </SplashContainer>
-    );
+    )
   }
 }
 
 class Index extends React.Component {
-  render() {
-    const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
+  render () {
+    const { config: siteConfig, language = '' } = this.props
+    const { baseUrl } = siteConfig
 
     const Block = props => (
       <Container
@@ -73,28 +73,28 @@ class Index extends React.Component {
           layout={props.layout}
         />
       </Container>
-    );
+    )
 
     const Features = () => (
       <Block layout="threeColumn">
         {[{
-            content: 'Schedule a CloudWatch event to trigger Trusted Adivsor.',
-            image: `${baseUrl}img/trusted_advisor.png`,
-            imageAlign: 'top',
-            title: 'Refresh',
-          },{
-            content: 'Index pattern based CloudWatch events to DynamoDB.',
-            image: `${baseUrl}img/index_data.png`,
-            imageAlign: 'top',
-            title: 'Index',
-          },{
-            content: 'Stream data and upsert/delete to Kibana.',
-            image: `${baseUrl}img/view_data.png`,
-            imageAlign: 'top',
-            title: 'Stream',
+          content: 'Schedule a CloudWatch event to trigger Trusted Adivsor.',
+          image: `${baseUrl}img/trusted_advisor.png`,
+          imageAlign: 'top',
+          title: 'Refresh'
+        }, {
+          content: 'Index pattern based CloudWatch events to DynamoDB.',
+          image: `${baseUrl}img/index_data.png`,
+          imageAlign: 'top',
+          title: 'Index'
+        }, {
+          content: 'Stream data and upsert/delete to Kibana.',
+          image: `${baseUrl}img/view_data.png`,
+          imageAlign: 'top',
+          title: 'Stream'
         }]}
       </Block>
-    );
+    )
 
     return (
       <div>
@@ -103,8 +103,8 @@ class Index extends React.Component {
           <Features />
         </div>
       </div>
-    );
+    )
   }
 }
 
-module.exports = Index;
+module.exports = Index

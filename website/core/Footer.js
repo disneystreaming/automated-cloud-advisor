@@ -1,19 +1,19 @@
-const React = require('react');
+const React = require('react')
 
 class Footer extends React.Component {
-  docUrl(doc) {
-    const baseUrl = this.props.config.baseUrl;
-    const docsUrl = this.props.config.docsUrl;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    return `${baseUrl}${docsPart}${doc}`;
+  docUrl (doc) {
+    const baseUrl = this.props.config.baseUrl
+    const docsUrl = this.props.config.docsUrl
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`
+    return `${baseUrl}${docsPart}${doc}`
   }
 
-  pageUrl(doc, language) {
-    const baseUrl = this.props.config.baseUrl;
-    return baseUrl + (language ? `${language}/` : '') + doc;
+  pageUrl (doc, language) {
+    const baseUrl = this.props.config.baseUrl
+    return baseUrl + (language ? `${language}/` : '') + doc
   }
 
-  render() {
+  render () {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
@@ -47,7 +47,7 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>Community</h5>
-            <a href={"https://www.disneystreaming.com"} target="_blank">Disney Streaming</a>
+            <a href={'https://www.disneystreaming.com'} target="_blank">Disney Streaming</a>
             <a
               href={`https://twitter.com/${this.props.config.twitterUsername}`}
               target="_blank"
@@ -107,8 +107,8 @@ class Footer extends React.Component {
         </a>
         <section className="copyright">{this.props.config.copyright}</section>
       </footer>
-    );
+    )
   }
 }
 
-module.exports = Footer;
+module.exports = Footer
