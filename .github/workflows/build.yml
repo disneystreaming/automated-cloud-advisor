@@ -7,7 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - uses: actions/setup-node@v1
         with:
@@ -15,7 +16,27 @@ jobs:
 
       - name: Install
         run: npm ci
-      - name: Test
-        run: npm t
+
       - name: Lint
         run: npm run lint
+
+      - name: Test
+        run: npm t
+
+      - name: Setup sonarqube
+        uses: warchant/setup-sonar-scanner@v1
+
+      # - name: Run sonarqube
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+      #   run: sonar-scanner
+      #     -Dsonar.host.url=https://sonarcloud.io/
+      #     -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      #     -Dsonar.organization=disneystreaming
+      #     -Dsonar.projectKey=disneystreaming_automated-cloud-advisor
+      #     -Dsonar.projectName=automated-cloud-advisor
+      #     -Dsonar.sourceEncoding=UTF-8
+      #     -Dsonar.sources=src
+      #     -Dsonar.tests=test
+      #     -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+      #     -Dsonar.testExecutionReportPaths=coverage/test-report.xml

@@ -1,4 +1,5 @@
 ![Node.js CI](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
 
 # Automated-Cloud-Advisor
 

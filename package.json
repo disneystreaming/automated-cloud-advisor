@@ -1,6 +1,6 @@
 {
   "name": "automated-cloud-advisor",
-  "version": "1.0.414",
+  "version": "0.0.1",
   "author": "ayyaz.akhtar@disneystreaming.com",
   "description": "Automated Cloud Custodial Service",
   "repository": {
@@ -26,6 +26,7 @@
     "eslint-plugin-react": "^7.19.0",
     "inquirer": "^7.2.0",
     "jest": "^26.0.1",
+    "jest-sonar-reporter": "^2.0.0",
     "lint": "^0.7.0"
   },
   "eslintConfig": {
@@ -50,6 +51,7 @@
   },
   "jest": {
     "testEnvironment": "node",
+    "testResultsProcessor": "jest-sonar-reporter",
     "collectCoverage": true,
     "silent": true,
     "projects": [
@@ -66,5 +68,9 @@
         "statements": 100
       }
     }
+  },
+  "jestSonar": {
+    "reportPath": "coverage",
+    "reportFile": "test-report.xml"
   }
 }

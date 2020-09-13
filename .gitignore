@@ -1,7 +1,8 @@
 .DS_Store
 
 node_modules
-coverage/
+coverage
+.scannerwork
 
 website/trasnlated_docs
 website/build/
