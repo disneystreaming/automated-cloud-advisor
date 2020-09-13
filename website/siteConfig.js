@@ -3,8 +3,8 @@ const repoUrl = 'https://github.com/disneystreaming/automated-cloud-advisor';
 const siteConfig = {
   title: 'Automated Cloud Advisor',
   tagline: 'Automated Cloud Custodial Service',
-  url: 'https://github.com/disneystreaming',
-  baseUrl: '/disneystreaming/automated-cloud-advisor/',
+  url: 'http(s)://disneystreaming.github.io/',
+  baseUrl: '/automated-cloud-advisor/',
   projectName: 'automated-cloud-advisor',
   organizationName: 'disneystreaming',
   githubHost: 'github.com',
