@@ -17,11 +17,13 @@ jobs:
         with:
           node-version: "12"
 
-      - name: Change directroy
-        run: cd website
-
       - name: Install
-        run: npm ci
+        run:
+          shell: npm ci
+          working-directory: website
 
       - name: publish
-        run: pwd && npm run publish-gh-pages
+        run:
+          shell: pwd && npm run publish-gh-pages
+          working-directory: website
+
