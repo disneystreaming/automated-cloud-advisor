@@ -2,23 +2,22 @@
 
 ![Build](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg)
 ![Docs](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Docs/badge.svg)
-[![Gitter](https://img.shields.io/gitter/room/disneystreaming/automated-cloud-advisor.svg)](https://gitter.im/disneystreaming/automated-cloud-advisor)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CLA assistant](https://cla-assistant.io/readme/badge/disneystreaming/automated-cloud-advisor)](https://cla-assistant.io/disneystreaming/automated-cloud-advisor)
 
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=security_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![npm](https://img.shields.io/npm/v/automated-cloud-advisor)](https://www.npmjs.com/package/automated-cloud-advisor)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/disneystreaming/automated-cloud-advisor)
 
 # Automated-Cloud-Advisor
 
-[Automated Cloud Custodial Service](https://github.com/disneystreaming/automated-cloud-advisor/)
-
-## Support
-
-- Ayyaz Akhtar (ayyaz.akhtar@disneystreaming.com)
+[Automated Cloud Advisor Docs](https://disneystreaming.github.io/automated-cloud-advisor/)
 
 # Table of Contents
 
@@ -37,7 +36,7 @@ It is deployed as a set of cloudformation stacks that comprise the data collecti
 
 ![alt-text](./docs/assets/01-dashboard.png)
 
-## Prerequisites
+## Installation
 
 Click [here](https://github.com/disneystreaming/automated-cloud-advisor/docs/setup/) to view prerequisites, dependencies, and requirements.
 
@@ -47,11 +46,15 @@ You can delete the stacks through the AWS CloudFormation console or CLI by refer
 
 ## Contribute
 
-Fork this repo and submit a pull request to the dev branch.
+- Sign the CLA
+- Submit pull request to the master branch
 
 ## Coding Standards
 
-Pull requests pass eslint and should maintain 100% unit test code coverage.
+- Documentaion
+- Passing Lint
+- Passing Unit Tests
+- Code coverage is at 100%
 
 ## Maintenance Plan
 

@@ -5,15 +5,14 @@
   "description": "Automated Cloud Advisor",
   "repository": {
     "type": "git",
-    "url": "git@github.co.:disneystreaming/automated-cloud-advisor.git"
+    "url": "git@github.com:disneystreaming/automated-cloud-advisor.git"
   },
-  "license": "ISC",
+  "license": "Apache-2.0",
   "directories": {
     "doc": "docs"
   },
   "main": "src/index.js",
   "scripts": {
-    "tag": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git push && git push --tags",
     "lint": "eslint . --fix",
     "test": "jest"
   },
