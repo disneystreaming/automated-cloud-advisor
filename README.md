@@ -10,15 +10,7 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=security_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=sqale_index)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=bugs)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=code_smells)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=ncloc)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-
 
 # Automated-Cloud-Advisor
 
