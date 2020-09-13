@@ -17,10 +17,6 @@ jobs:
         with:
           node-version: "12"
 
-      - name: Install
-        run: npm ci
-        working-directory: website
-
      - name: Add key to allow access to repository
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
@@ -39,8 +35,10 @@ jobs:
         env:
           USE_SSH: true
           GIT_USER: git
+        working-directory: website
         run: |
           git config --global user.email "actions@gihub.com"
           git config --global user.name "gh-actions"
-          npmr run publish-gh-pages
+          npm ci
+          npm run publish-gh-pages
 
