@@ -11,9 +11,15 @@
   "directories": {
     "doc": "docs"
   },
-  "main": "src/index.js",
+  "files": [
+    "src",
+    "aws",
+    "kibana"
+  ],
+  "main": "install.js",
   "scripts": {
-    "lint": "eslint . --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "jest"
   },
   "dependencies": {},
