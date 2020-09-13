@@ -18,12 +18,10 @@ jobs:
           node-version: "12"
 
       - name: Install
-        run:
-          shell: npm ci
-          working-directory: website
+        run: npm ci
+        working-directory: website
 
       - name: publish
-        run:
-          shell: pwd && npm run publish-gh-pages
-          working-directory: website
+        run: pwd && npm run publish-gh-pages
+        working-directory: website
 
