@@ -1,0 +1,21 @@
+{
+  "version": "0",
+  "id": "8122c2be-d198-7b29-b38d-b90230b3f64b",
+  "detail-type": "Trusted Advisor Check Item Refresh Notification",
+  "source": "aws.trustedadvisor",
+  "account": "123456789012",
+  "time": "2020-02-25T19:32:48Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "check-name": "Invalid",
+    "check-item-detail": {
+      "Region": "us-east-1",
+      "Name": "example",
+      "Estimated Monthly Savings": "$18.00"
+    },
+    "status": "WARN",
+    "resource_id": "arn:aws:Invalid:us-east-1:123456789012:Invalid/example",
+    "uuid": "2b415725-8bea-4047-9d07-218a0b1139d1"
+  }
+}

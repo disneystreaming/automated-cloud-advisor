@@ -1,0 +1,16 @@
+{
+  "docs": {
+    "Getting Started": [
+      "start",
+      "setup"
+    ],
+    "Build Infrastructure": [
+      "refresh",
+      "index",
+      "stream"
+    ],
+    "Build Dashboard": [
+      "view"
+    ]
+  }
+}

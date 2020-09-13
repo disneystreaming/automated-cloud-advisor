@@ -1,0 +1,116 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Refresh Infrastructure
+Parameters:
+    ResourcePrefix:
+        Type: String
+        Description: Prefix that will be added to all resources
+    ResourceName:
+        Type: String
+        Description: Name that will be added to all resources
+    S3Bucket:
+        Type: String
+        Description: S3 bucket reference
+    S3KeyRefresh:
+        Type: String
+        Description: S3 key reference
+    ScheduleExpression:
+        Type: String
+        Description: Scheduled Cron
+        AllowedValues:
+            - 1 hour
+            - 12 hours
+        Default: 1 hour
+
+Resources:
+    Policy:
+        Type: AWS::IAM::ManagedPolicy
+        Properties:
+            ManagedPolicyName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Policy that will allow the lambda to perform aws actions
+            PolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                    -
+                        Effect: Allow
+                        Action:
+                            - logs:CreateLogGroup
+                            - logs:CreateLogStream
+                            - logs:PutLogEvents
+                        Resource: '*'
+                    -
+                        Effect: Allow
+                        Action:
+                            - support:RefreshTrustedAdvisorCheck
+                        Resource: '*'
+    Role:
+        Type: AWS::IAM::Role
+        DependsOn: Policy
+        Properties:
+            RoleName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Allows lambda to refresh trusted advisor
+            AssumeRolePolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                  - Effect: Allow
+                    Principal:
+                      Service:
+                        - lambda.amazonaws.com
+                    Action:
+                      - sts:AssumeRole
+            ManagedPolicyArns:
+              - !Ref Policy
+    Lambda:
+        Type: AWS::Lambda::Function
+        DependsOn: Role
+        Properties:
+            FunctionName: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Lambda that handles events emitted periodically by CloudWatch.
+            Runtime: nodejs12.x
+            Role: !GetAtt Role.Arn
+            Handler: refresh.handler
+            Code:
+                S3Bucket: !Ref S3Bucket
+                S3Key: !Ref S3KeyRefresh
+    Rule:
+        Type: AWS::Events::Rule
+        DependsOn: Lambda
+        Properties:
+            Name: !Sub '${ResourcePrefix}-${ResourceName}'
+            Description: Scheduled Rule to refresh data
+            ScheduleExpression: !Sub 'rate(${ScheduleExpression})'
+            State: ENABLED
+            Targets:
+                -
+                    Arn: !GetAtt Lambda.Arn
+                    Id: !Ref Lambda
+    PermissionForEventsToInvokeLambda:
+        Type: AWS::Lambda::Permission
+        DependsOn: Rule
+        Properties:
+            FunctionName: !Ref Lambda
+            Action: "lambda:InvokeFunction"
+            Principal: "events.amazonaws.com"
+            SourceArn: !GetAtt Rule.Arn
+
+Outputs:
+    PolicyArn:
+        Description: Policy Arn
+        Value: !Ref Policy
+    RoleName:
+        Description: Role Name
+        Value: !Ref Role
+    RoleArn:
+        Description: Role Arn
+        Value: !GetAtt Role.Arn
+    RoleId:
+        Description: Role Id
+        Value: !GetAtt Role.RoleId
+    LambdaName:
+        Description: Lambda Name
+        Value: !Ref Lambda
+    LambdaArn:
+        Description: Lambda Arn
+        Value: !GetAtt Lambda.Arn
+    RuleArn:
+        Description: Rule Arn
+        Value: !GetAtt Rule.Arn

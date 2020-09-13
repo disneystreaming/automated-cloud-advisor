@@ -1,0 +1,9 @@
+.DS_Store
+
+node_modules
+coverage/
+
+website/trasnlated_docs
+website/build/
+website/node_modules
+website/i18n/*
