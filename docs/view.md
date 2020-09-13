@@ -11,13 +11,13 @@ Navigate to the Kibana endpoint to create an index pattern.
 > https://`ElasticSearchDomainEndpoint`/_plugin/kibana/app/kibana#/management/kibana/index_pattern?_g=()
 
 Type in the index that you specified and click `Next step`.
-![alt-text](/disneystreaming/automated-cloud-advisor/img/kibana/index/01-index.png)
+![alt-text](/automated-cloud-advisor/img/kibana/index/01-index.png)
 
 Click `Create index pattern`.
-![alt-text](/disneystreaming/automated-cloud-advisor/img/kibana/index/02-index.png)
+![alt-text](/automated-cloud-advisor/img/kibana/index/02-index.png)
 
 View the Index pattern.
-![alt-text](/disneystreaming/automated-cloud-advisor/img/kibana/index/03-index.png)
+![alt-text](/automated-cloud-advisor/img/kibana/index/03-index.png)
 
 Select the URL and copy the reference of the index id.
 
@@ -63,13 +63,13 @@ Go to the Management page and click on Saved Objects.
 > https://`ElasticSearchDomainEndpoint`/_plugin/kibana/app/kibana#/management/kibana/objects?_g=()
 
 Click on Import.
-![alt-text](/disneystreaming/automated-cloud-advisor/img/kibana/import/01-import.png)
+![alt-text](/automated-cloud-advisor/img/kibana/import/01-import.png)
 
 Drag file or import file.
-![alt-text](/disneystreaming/automated-cloud-advisor/img/kibana/import/02-import.png)
+![alt-text](/automated-cloud-advisor/img/kibana/import/02-import.png)
 
 Click On Import.
-![alt-text](/disneystreaming/automated-cloud-advisor/img/kibana/import/03-import.png)
+![alt-text](/automated-cloud-advisor/img/kibana/import/03-import.png)
 
 Repeat for the other remaining widgets.
 
