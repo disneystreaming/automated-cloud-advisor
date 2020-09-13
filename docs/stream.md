@@ -3,7 +3,7 @@ id: stream
 title: Stream Index To ElasticSearch
 ---
 
-![alt-text](/disneystreaming/automated-cloud-advisor/img/view_data.png)
+![alt-text](/automated-cloud-advisor/img/view_data.png)
 
 This stack will automate the process of updating/deleting the data in ElasticSearch.
 

@@ -3,7 +3,7 @@ id: index
 title: Index Events To DynamoDB
 ---
 
-![alt-text](/disneystreaming/automated-cloud-advisor/img/index_data.png)
+![alt-text](/automated-cloud-advisor/img/index_data.png)
 
 This stack will automate the process for parsing the Trusted Advisor data and storing on the DynamoDB index.
 

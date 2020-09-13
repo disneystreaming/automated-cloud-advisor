@@ -3,7 +3,7 @@ id: refresh
 title: Schedule Trusted Advisor Refresh
 ---
 
-![alt-text](/disneystreaming/automated-cloud-advisor/img/trusted_advisor.png)
+![alt-text](/automated-cloud-advisor/img/trusted_advisor.png)
 
 This stack will automate the process of refreshing Trusted Advisor data.
 
