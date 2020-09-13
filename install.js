@@ -153,7 +153,7 @@ const answerPrompt = async () => {
         s3Key: streamKey,
         s3KeyParam: 'S3KeyStream',
         file: 'stream',
-        additionalParameters: ` ParameterKey=StreamARN,ParameterValue=${`${prefix}-${indexName}-StreamArn`} \\
+        additionalParameters: `ParameterKey=StreamARN,ParameterValue=${`${prefix}-${indexName}-StreamArn`} \\
         ParameterKey=SecurityGroupIdsLambda,ParameterValue=${sgLambda} \\
         ParameterKey=SecurityGroupIdsES,ParameterValue=${sgEs} \\
         ParameterKey=SubnetIds,ParameterValue="${`${subnet1}\\,${subnet2}`}"`
@@ -161,8 +161,8 @@ const answerPrompt = async () => {
 
     return [
         refreshStack,
-        // indexStack,
-        // ...(stacks === 'all' ? [streamStack] : [])
+        indexStack,
+        ...(stacks === 'all' ? [streamStack] : [])
     ];
 };
 

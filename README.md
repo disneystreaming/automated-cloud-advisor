@@ -1,4 +1,4 @@
-[![Build Status](https://oss-drone.bamgrid.com/api/badges/disneystreaming/automated-cloud-advisor/status.svg)](https://oss-drone.bamgrid.com/disneystreaming/automated-cloud-advisor)
+![Node.js CI](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Node.js%20CI/badge.svg)
 
 # Automated-Cloud-Advisor
 
