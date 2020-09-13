@@ -97,12 +97,10 @@ Infrastructure configurations can be overwritten to tweak costs. Average estimat
 You can either run this script or manually set up the infrastructure in the next few steps. The script assumes that [jq](https://stedolan.github.io/jq/) (a json parsing library) is installed on your system and that you have valid credentials that can be used to create AWS resources through CloudFormation.
 
 ```bash
-# Clone Repo
-git clone git@github.com:disneystreaming/automated-cloud-advisor.git
-# Move to directory
-cd automated-cloud-advisor
-# Install dev dependencies
-npm i
-# Run Install
-node install.js
+# Download installer
+npm i -g automated-cloud-advisor
+# Execute Binary
+automated-cloud-advisor
 ```
+
+![alt-text](/automated-cloud-advisor/img/installation.png)

@@ -184,7 +184,7 @@ const execute = async (command) => {
  * @returns {String}
  */
 const zipToS3 = async ({ s3Bucket, s3Key, file, profile = '' }) => await execute(`
-    pushd src
+    pushd $(npm root -g)/automated-cloud-advisor/src
         zip -X ${s3Key} ${file}.js
         aws s3 cp \\
             ${profile} \\
@@ -204,7 +204,7 @@ const deployCFT = async ({ prefix, name, s3Bucket, s3KeyParam, s3Key, file, prof
         ${profile} \\
         --region us-east-1 \\
         --stack-name ${prefix}-${name} \\
-        --template-body file://aws/${file}.yml \\
+        --template-body file://$(npm root -g)/automated-cloud-advisor/aws/${file}.yml \\
         --capabilities CAPABILITY_NAMED_IAM \\
         --parameters ParameterKey=ResourcePrefix,ParameterValue=${prefix} \\
         ParameterKey=ResourceName,ParameterValue=${name} \\
