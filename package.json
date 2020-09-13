@@ -31,7 +31,8 @@
     "inquirer": "^7.2.0",
     "jest": "^26.0.1",
     "jest-sonar-reporter": "^2.0.0",
-    "lint": "^0.7.0"
+    "lint": "^0.7.0",
+    "semantic-release": "^17.1.1"
   },
   "eslintConfig": {
     "extends": "standard",
