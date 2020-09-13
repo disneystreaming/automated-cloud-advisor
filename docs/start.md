@@ -11,7 +11,7 @@ title: Getting Started
 
 Automated Cloud Advisor helps with cost optimization by automating the collection of data on AWS resources that are under-utilized, and providing a useful display for this data.
 
-![alt-text](/pages/disneystreaming/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png)
+![alt-text](/disneystreaming/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png)
 
 ## Trusted Advisor
 
