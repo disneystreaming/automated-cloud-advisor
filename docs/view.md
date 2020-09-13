@@ -77,4 +77,4 @@ Repeat for the other remaining widgets.
 
 > https://`ElasticSearchDomainEndpoint`/_plugin/kibana/app/kibana#/dashboard/058e1e70-5a8d-11ea-aa13-c18c574b22bb?_g=()&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!((embeddableConfig:(),gridData:(h:15,i:'2',w:24,x:24,y:15),id:db2e2f20-5a97-11ea-aa13-c18c574b22bb,panelIndex:'2',type:visualization,version:'7.4.2'),(embeddableConfig:(),gridData:(h:15,i:'3',w:24,x:0,y:15),id:'0b591de0-5a98-11ea-aa13-c18c574b22bb',panelIndex:'3',type:visualization,version:'7.4.2'),(embeddableConfig:(),gridData:(h:15,i:'4',w:24,x:24,y:0),id:'27ffee90-5c98-11ea-aa13-c18c574b22bb',panelIndex:'4',type:visualization,version:'7.4.2'),(embeddableConfig:(),gridData:(h:15,i:c1205809-d610-4f2c-ae7f-217b2deaa77e,w:24,x:0,y:0),id:'7a8592a0-5c98-11ea-aa13-c18c574b22bb',panelIndex:c1205809-d610-4f2c-ae7f-217b2deaa77e,type:visualization,version:'7.4.2')),query:(language:kuery,query:''),timeRestore:!f,title:Summary,viewMode:view)
 
-![alt-text](/disneystreaming/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png)
+![alt-text](/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png)

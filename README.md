@@ -1,4 +1,4 @@
-<img src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" width="200px" height="231px" align="right">
+<img src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" width="200px" height="231px" align="right" alt="Logo">
 
 ![Build](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg)
 ![Docs](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Docs/badge.svg)
@@ -36,7 +36,7 @@ Automated Cloud Advisor is a extensible tool that aims at facilitating cost opti
 
 It is deployed as a set of cloudformation stacks that comprise the data collection and its display in a Kibana dashboard.
 
-![alt-text](./docs/assets/01-dashboard.png)
+<img src="https://disneystreaming.github.io/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png" alt="Dashboard">
 
 ## Installation
 
