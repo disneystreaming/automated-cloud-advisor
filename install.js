@@ -82,25 +82,25 @@ const prompts = [{
   name: 'subnet1',
   message: 'What is the value for Subnet 1',
   when: answers => answers.stacks === 'all',
-  default: 'subnet-xxxxxxxx'
+  default: 'subnet-xxxxxxx1'
 }, {
   type: 'input',
   name: 'subnet2',
   message: 'What is the value for Subnet 2',
   when: answers => answers.stacks === 'all',
-  default: 'subnet-xxxxxxxx'
+  default: 'subnet-xxxxxxx2'
 }, {
   type: 'input',
   name: 'sgLambda',
   message: 'What is the Security Group for the Lambda',
   when: answers => answers.stacks === 'all',
-  default: 'sg-xxxxxxxx'
+  default: 'sg-xxxxxxla'
 }, {
   type: 'input',
   name: 'sgEs',
   message: 'What is the Security Group for the Elastic Search',
   when: answers => answers.stacks === 'all',
-  default: 'sg-xxxxxxxx'
+  default: 'sg-xxxxxxes'
 }]
 
 /**
