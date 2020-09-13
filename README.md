@@ -1,22 +1,24 @@
-<img src="https://github.com/disneystreaming/weaver-test/raw/master/website/static/img/logo.png" width="200px" height="231px" align="right">
+<img src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" width="200px" height="231px" align="right">
 
 ![Build](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg)
 ![Docs](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Docs/badge.svg)
-
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=bugs)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=code_smells)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=ncloc)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=security_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=sqale_index)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-
 [![Gitter](https://img.shields.io/gitter/room/disneystreaming/automated-cloud-advisor.svg)](https://gitter.im/disneystreaming/automated-cloud-advisor)
 [![CLA assistant](https://cla-assistant.io/readme/badge/disneystreaming/automated-cloud-advisor)](https://cla-assistant.io/disneystreaming/automated-cloud-advisor)
+
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=security_rating)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=sqale_index)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=bugs)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=code_smells)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=ncloc)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
+
 
 # Automated-Cloud-Advisor
 
