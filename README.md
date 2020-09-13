@@ -3,7 +3,7 @@
 
 # Automated-Cloud-Advisor
 
-[Automated Cloud Custodial Service](https://github.com/pages/disneystreaming/automated-cloud-advisor/)
+[Automated Cloud Custodial Service](https://github.com/disneystreaming/automated-cloud-advisor/)
 
 ## Support
 
@@ -28,7 +28,7 @@ It is deployed as a set of cloudformation stacks that comprise the data collecti
 
 ## Prerequisites
 
-Click [here](https://github.com/pages/disneystreaming/automated-cloud-advisor/docs/setup/) to view prerequisites, dependencies, and requirements.
+Click [here](https://github.com/disneystreaming/automated-cloud-advisor/docs/setup/) to view prerequisites, dependencies, and requirements.
 
 ## Uninstall
 
