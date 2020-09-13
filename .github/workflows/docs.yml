@@ -22,6 +22,8 @@ jobs:
         working-directory: website
 
       - name: publish
-        run: pwd && npm run publish-gh-pages
+        env:
+          GIT_USER: aakhtar3
+        run: npm run publish-gh-pages
         working-directory: website
 
