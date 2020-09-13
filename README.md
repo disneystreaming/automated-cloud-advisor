@@ -1,4 +1,4 @@
-![Node.js CI](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Node.js%20CI/badge.svg)
+![Node.js CI](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg)
 
 # Automated-Cloud-Advisor
 
