@@ -78,7 +78,7 @@ class Index extends React.Component {
     const Features = () => (
       <Block layout="threeColumn">
         {[{
-          content: 'Schedule a CloudWatch event to trigger Trusted Adivsor.',
+          content: 'Schedule a CloudWatch event to trigger Trusted Advisor.',
           image: `${baseUrl}img/trusted_advisor.png`,
           imageAlign: 'top',
           title: 'Refresh'
