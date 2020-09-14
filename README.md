@@ -9,10 +9,10 @@
 </h3>
 
 <p align="center">
-  <a href="https://GitHub.com/disneystreaming/StrapDown.js/issues/">
+  <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/issues/">
     <img alt="Issues" src="https://img.shields.io/github/issues/disneystreaming/automated-cloud-advisor.svg">
   </a>
-  <a href="https://GitHub.com/disneystreaming/StrapDown.js/pull/">
+  <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/pull/">
     <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/disneystreaming/automated-cloud-advisor.svg">
 </p>
 
