@@ -5,8 +5,16 @@
 </p>
 
 <h3 align="center">
-  👉 <a target="_blank" href="https://disneystreaming.github.io/automated-cloud-advisor/">Documentation</a> 👈
+  👉 <a target="_blank" href="https://disneystreaming.github.io/automated-cloud-advisor/">Installation</a> 👈
 </h3>
+
+<p align="center">
+  <a href="https://GitHub.com/disneystreaming/StrapDown.js/issues/">
+    <img alt="Issues" src="https://img.shields.io/github/issues/disneystreaming/automated-cloud-advisor.svg">
+  </a>
+  <a href="https://GitHub.com/disneystreaming/StrapDown.js/pull/">
+    <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/disneystreaming/automated-cloud-advisor.svg">
+</p>
 
 <p align="center">
   <a href="https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3ABuild">
@@ -86,11 +94,19 @@ The tool is deployed as a set of cloudformation stacks that comprise the data co
 
 ## :computer: Installation :computer:
 
-Click [here](https://disneystreaming.github.io/automated-cloud-advisor/docs/setup) to view documentation on prerequisites, dependencies, installation, and requirements.
+Click [here](https://disneystreaming.github.io/automated-cloud-advisor/docs/setup) to view documentation on:
+
+- Prerequisites
+- Dependencies
+- Requirements
+- Installation
 
 ## :name_badge: Uninstall :name_badge:
 
-You can delete the stacks through the AWS CloudFormation console or CLI by referencing the stack name/id.
+Using the stack name/id to delete by:
+
+- AWS console
+- AWS CLI
 
 ## :gift: Contribute :gift:
 
@@ -100,12 +116,13 @@ You can delete the stacks through the AWS CloudFormation console or CLI by refer
 ## :chart_with_upwards_trend: Coding Standards :chart_with_upwards_trend:
 
 - Documentation
-- Passing Lint
-- Passing Unit Tests
+- Passing lint
+- Passing unit tests
 - Code coverage is at 100%
+- Up to date dependencies
 
 ## :date: Maintenance Plan :date:
 
-- Submit PR
-- Merge PR to Master
-- Let [Semantic Release](https://github.com/semantic-release/semantic-release) publish new version
+- Submit pull request
+- Merge pull request to master
+- [Semantic Release](https://github.com/semantic-release/semantic-release) will publish new version
