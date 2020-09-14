@@ -75,7 +75,6 @@ The tool is deployed as a set of cloudformation stacks that comprise the data co
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/view_data.png" alt="Stream">
 </p>
 
-
 <p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png" alt="Dashboard">
 </p>
