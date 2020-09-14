@@ -1,37 +1,77 @@
-<img src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" width="200px" height="231px" align="right" alt="Logo">
+<h1 align="center">Automated-Cloud-Advisor</h1>
 
-[![Build](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg)](https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3ABuild)
-[![Docs](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Docs/badge.svg)](https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3ADocs)
-[![Publish](https://github.com/disneystreaming/automated-cloud-advisor/workflows/Publish/badge.svg)](https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3APublish)
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage)](https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+<div style="text-align:center">
+    <img align="center" src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" width="200px" height="200px"  alt="Logo">
+</div>
 
 
-[![npm](https://img.shields.io/npm/v/automated-cloud-advisor)](https://www.npmjs.com/package/automated-cloud-advisor)
-[![dependencies Status](https://david-dm.org/disneystreaming/automated-cloud-advisor/status.svg)](https://david-dm.org/disneystreaming/automated-cloud-advisor)
-[![devDependencies Status](https://david-dm.org/disneystreaming/automated-cloud-advisor/dev-status.svg)](https://david-dm.org/disneystreaming/automated-cloud-advisor?type=dev)
+<h3 align="center">
+  <a href="https://disneystreaming.github.io/automated-cloud-advisor/">> Documentation <</a>
+</h3>
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![CLA assistant](https://cla-assistant.io/readme/badge/disneystreaming/automated-cloud-advisor)](https://cla-assistant.io/disneystreaming/automated-cloud-advisor)
-[![Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/disneystreaming/automated-cloud-advisor)
+<p align="center">
+  <a href="https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3ABuild">
+    <img alt="Build" src="https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg">
+  </a>
+  <a href="https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3ADocs">
+    <img alt="Docs" src="https://github.com/disneystreaming/automated-cloud-advisor/workflows/Docs/badge.svg">
+  </a>
+  <a href="https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3APublish">
+    <img alt="Docs" src="https://github.com/disneystreaming/automated-cloud-advisor/workflows/Publish/badge.svg">
+  </a>
+</p>
 
-# Automated-Cloud-Advisor
+<p align="center">
+  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
+    <img alt="npm latest version" src="https://img.shields.io/npm/v/automated-cloud-advisor">
+  </a>
+  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
+    <img alt="dependencies Status" src="https://david-dm.org/disneystreaming/automated-cloud-advisor/status.svg">
+  </a>
+  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
+    <img alt="devDependencies Status" src="https://david-dm.org/disneystreaming/automated-cloud-advisor/dev-status.svg">
+  </a>
+</p>
 
-[Automated Cloud Advisor Docs](https://disneystreaming.github.io/automated-cloud-advisor/)
+<p align="center">
+  <a href="https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor">
+    <img alt="Sonar Quality" src="https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status">
+  </a>
+  <a href="https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor">
+    <img alt="Sonar Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage">
+  </a>
+  <a href="http://standardjs.com">
+    <img alt="js-standard-style" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/semantic-release/semantic-release">
+    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
+  </a>
+  <a href="https://opensource.org/licenses/Apache-2.0">
+    <img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
+  </a>
+  <a href="https://cla-assistant.io/disneystreaming/automated-cloud-advisor">
+    <img alt="CLA assistant" src="https://cla-assistant.io/readme/badge/disneystreaming/automated-cloud-advisor">
+  </a>
+    <a href="https://gitter.im/disneystreaming/automated-cloud-advisor">
+    <img alt="Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor" src="https://badges.gitter.im/Join%20Chat.svg">
+  </a>
+</p>
+
+
 
 # Table of Contents
 
-1. [Introduction](#introduction)
+1. [Motivation](#motivation)
 2. [Prerequisites](#prerequisites)
 3. [Uninstall](#uninstall)
 4. [Contribute](#contribute)
 5. [Coding Standards](#coding-standards)
 6. [Maintenance Plan](#maintenance-plan)
 
-## Introduction
+## Motivation
 
 Automated Cloud Advisor is a extensible tool that aims at facilitating cost optimization in AWS, by collecting data for resources that are under utilized.
 
@@ -54,11 +94,14 @@ You can delete the stacks through the AWS CloudFormation console or CLI by refer
 
 ## Coding Standards
 
-- Documentaion
+- Documentation
 - Passing Lint
 - Passing Unit Tests
 - Code coverage is at 100%
 
 ## Maintenance Plan
 
-Merging to the master branch leads to the automatic publication of a new version of the tool.
+- Submit PR
+- Merge PR to Master
+- Let [Semantic Release](https://github.com/semantic-release/semantic-release) publish new version
+
