@@ -21,18 +21,6 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
-    <img alt="npm latest version" src="https://img.shields.io/npm/v/automated-cloud-advisor">
-  </a>
-  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
-    <img alt="dependencies Status" src="https://david-dm.org/disneystreaming/automated-cloud-advisor/status.svg">
-  </a>
-  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
-    <img alt="devDependencies Status" src="https://david-dm.org/disneystreaming/automated-cloud-advisor/dev-status.svg">
-  </a>
-</p>
-
-<p align="center">
   <a href="https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor">
     <img alt="Sonar Quality" src="https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status">
   </a>
@@ -41,6 +29,18 @@
   </a>
   <a href="http://standardjs.com">
     <img alt="js-standard-style" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
+    <img alt="npm latest version" src="https://img.shields.io/npm/v/automated-cloud-advisor">
+  </a>
+  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
+    <img alt="dependencies Status" src="https://david-dm.org/disneystreaming/automated-cloud-advisor/status.svg">
+  </a>
+  <a href="https://www.npmjs.com/package/automated-cloud-advisor">
+    <img alt="devDependencies Status" src="https://david-dm.org/disneystreaming/automated-cloud-advisor/dev-status.svg">
   </a>
 </p>
 
