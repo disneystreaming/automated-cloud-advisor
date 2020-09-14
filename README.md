@@ -56,17 +56,15 @@
 </p>
 
 <p align="center">
+  <a href="https://snyk.io/test/github/disneystreaming/automated-cloud-advisor?targetFile=package.json">
+    <img src="https://snyk.io/test/github/disneystreaming/automated-cloud-advisor/badge.svg?targetFile=package.json" alt="Known Vulnerabilities">
+  </a>
   <a href="https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor">
     <img alt="Sonar Quality" src="https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status">
   </a>
   <a href="https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor">
     <img alt="Sonar Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage">
   </a>
-
-  <a href="https://snyk.io/test/github/disneystreaming/automated-cloud-advisor?targetFile=package.json">
-    <img src="https://snyk.io/test/github/disneystreaming/automated-cloud-advisor/badge.svg?targetFile=package.json" alt="Known Vulnerabilities">
-  </a>
-
   <a href="http://standardjs.com">
     <img alt="js-standard-style" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg">
   </a>
