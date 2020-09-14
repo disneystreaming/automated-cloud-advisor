@@ -1,12 +1,11 @@
 <h1 align="center">Automated-Cloud-Advisor</h1>
 
-<div style="text-align:center">
+<p align="center">
     <img src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" width="200px" height="200px"  alt="Logo">
-</div>
-
+</p>
 
 <h3 align="center">
-  <a href="https://disneystreaming.github.io/automated-cloud-advisor/">> Documentation <</a>
+  👉 <a href="https://disneystreaming.github.io/automated-cloud-advisor/">Documentation</a> 👈
 </h3>
 
 <p align="center">
@@ -60,32 +59,24 @@
   </a>
 </p>
 
-
 ## :speech_balloon: Motivation :speech_balloon:
 
 Automated Cloud Advisor is a extensible tool that aims at facilitating cost optimization in AWS, by collecting data for resources that are under utilized. In addition, this is a great learning tool for new DevOps/Cloud engineers that want to start automating things in AWS.
 
-The tool is deployed as a set of cloudformation stacks that comprise the data collection.
+The tool is deployed as a set of cloudformation stacks that comprise the data collection and the data can be displayed in a Kibana dashboard.
 
-<div style="text-align:left">
-    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/trusted_advisor.png" alt="Refresh">
-    <p>Schedule a CloudWatch event to trigger Trusted Advisor.</p>
-</div>
+<img align="left" src="https://disneystreaming.github.io/automated-cloud-advisor/img/trusted_advisor.png" alt="Refresh">
 
 <div style="text-align:center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/index_data.png" alt="Index">
-    <p>Index pattern based CloudWatch events to DynamoDB.</p>
 </div>
 
-<div style="text-align:right">
-    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/view_data.png" alt="Stream">
-    <p>Stream data and upsert/delete to Kibana.</p>
-</div>
+<img align="right" src="https://disneystreaming.github.io/automated-cloud-advisor/img/view_data.png" alt="Stream">
 
-<div style="text-align:center">
+<p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png" alt="Dashboard">
-    <p>The data can be displayed in a Kibana dashboard.</p>
-</div>
+</p>
+
 
 
 ## :computer: Installation :computer:
