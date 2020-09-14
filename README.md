@@ -5,7 +5,7 @@
 </p>
 
 <h3 align="center">
-  👉 <a href="https://disneystreaming.github.io/automated-cloud-advisor/">Documentation</a> 👈
+  👉 <a target="_blank" href="https://disneystreaming.github.io/automated-cloud-advisor/">Documentation</a> 👈
 </h3>
 
 <p align="center">
