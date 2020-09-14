@@ -65,9 +65,13 @@ Automated Cloud Advisor is a extensible tool that aims at facilitating cost opti
 
 The tool is deployed as a set of cloudformation stacks that comprise the data collection and the data can be displayed in a Kibana dashboard.
 
-<img align="left" src="https://disneystreaming.github.io/automated-cloud-advisor/img/trusted_advisor.png" alt="Refresh">
-<img align="right" src="https://disneystreaming.github.io/automated-cloud-advisor/img/index_data.png" alt="Index">
-<img align="left" src="https://disneystreaming.github.io/automated-cloud-advisor/img/view_data.png" alt="Stream">
+<p align="center">
+    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/trusted_advisor.png" alt="Refresh">
+    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/index_data.png" alt="Index">
+    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/view_data.png" alt="Stream">
+</p>
+
+
 
 <p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png" alt="Dashboard">
