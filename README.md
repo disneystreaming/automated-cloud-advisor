@@ -89,7 +89,7 @@ You can delete the stacks through the AWS CloudFormation console or CLI by refer
 
 ## :gift: Contribute :gift:
 
-- Sign the CLA
+- Sign the [CLA](https://gist.github.com/dss-osc/c0c1eefa0832609a3c62a9bd05c00b70)
 - Submit pull request to the master branch
 
 ## :chart_with_upwards_trend: Coding Standards :chart_with_upwards_trend:
