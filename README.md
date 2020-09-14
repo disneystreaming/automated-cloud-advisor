@@ -1,7 +1,7 @@
 <h1 align="center">Automated-Cloud-Advisor</h1>
 
 <div style="text-align:center">
-    <img align="center" src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" width="200px" height="200px"  alt="Logo">
+    <img src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" width="200px" height="200px"  alt="Logo">
 </div>
 
 
@@ -61,45 +61,54 @@
 </p>
 
 
+## :speech_balloon: Motivation :speech_balloon:
 
-# Table of Contents
+Automated Cloud Advisor is a extensible tool that aims at facilitating cost optimization in AWS, by collecting data for resources that are under utilized. In addition, this is a great learning tool for new DevOps/Cloud engineers that want to start automating things in AWS.
 
-1. [Motivation](#motivation)
-2. [Prerequisites](#prerequisites)
-3. [Uninstall](#uninstall)
-4. [Contribute](#contribute)
-5. [Coding Standards](#coding-standards)
-6. [Maintenance Plan](#maintenance-plan)
+The tool is deployed as a set of cloudformation stacks that comprise the data collection.
 
-## Motivation
+<div style="text-align:left">
+    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/trusted_advisor.png" alt="Refresh">
+    <p>Schedule a CloudWatch event to trigger Trusted Advisor.</p>
+</div>
 
-Automated Cloud Advisor is a extensible tool that aims at facilitating cost optimization in AWS, by collecting data for resources that are under utilized.
+<div style="text-align:center">
+    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/index_data.png" alt="Index">
+    <p>Index pattern based CloudWatch events to DynamoDB.</p>
+</div>
 
-It is deployed as a set of cloudformation stacks that comprise the data collection and its display in a Kibana dashboard.
+<div style="text-align:right">
+    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/view_data.png" alt="Stream">
+    <p>Stream data and upsert/delete to Kibana.</p>
+</div>
 
-<img src="https://disneystreaming.github.io/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png" alt="Dashboard">
+<div style="text-align:center">
+    <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png" alt="Dashboard">
+    <p>The data can be displayed in a Kibana dashboard.</p>
+</div>
 
-## Installation
 
-Click [here](https://github.com/disneystreaming/automated-cloud-advisor/docs/setup/) to view prerequisites, dependencies, and requirements.
+## :computer: Installation :computer:
 
-## Uninstall
+Click [here](https://disneystreaming.github.io/automated-cloud-advisor/docs/setup) to view documentation on prerequisites, dependencies, installation, and requirements.
+
+## :name_badge: Uninstall :name_badge:
 
 You can delete the stacks through the AWS CloudFormation console or CLI by referencing the stack name/id.
 
-## Contribute
+## :gift: Contribute :gift:
 
 - Sign the CLA
 - Submit pull request to the master branch
 
-## Coding Standards
+## :chart_with_upwards_trend: Coding Standards :chart_with_upwards_trend:
 
 - Documentation
 - Passing Lint
 - Passing Unit Tests
 - Code coverage is at 100%
 
-## Maintenance Plan
+## :date: Maintenance Plan :date:
 
 - Submit PR
 - Merge PR to Master
