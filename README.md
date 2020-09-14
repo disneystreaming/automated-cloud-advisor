@@ -67,10 +67,13 @@ The tool is deployed as a set of cloudformation stacks that comprise the data co
 
 <p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/trusted_advisor.png" alt="Refresh">
+</p>
+<p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/index_data.png" alt="Index">
+</p>
+<p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/view_data.png" alt="Stream">
 </p>
-
 
 
 <p align="center">
