@@ -25,7 +25,7 @@ class HomeSplash extends React.Component {
       <div className="projectLogo">
         <img src={props.img_src} alt="Project Logo" />
       </div>
-    );
+    )
 
     const ProjectTitle = props => (
       <h2 className="projectTitle">
