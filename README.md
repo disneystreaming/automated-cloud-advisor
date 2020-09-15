@@ -1,13 +1,13 @@
 <h1 align="center">Automated-Cloud-Advisor</h1>
-
+<!-- Logo -->
 <p align="center">
     <img width="200px"  src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.svg" alt="Logo">
 </p>
-
+<!-- Install -->
 <h2 align="center">
   👉 <a target="_blank" href="https://disneystreaming.github.io/automated-cloud-advisor/">Installation</a> 👈
 </h2>
-
+<!-- Repo -->
 <p align="center">
   <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/issues/">
     <img alt="Issues" src="https://img.shields.io/github/issues/disneystreaming/automated-cloud-advisor.svg">
@@ -15,7 +15,7 @@
   <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/pull/">
     <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/disneystreaming/automated-cloud-advisor.svg">
 </p>
-
+<!-- Workflow -->
 <p align="center">
   <a href="https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3ABuild">
     <img alt="Build" src="https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg">
@@ -27,7 +27,7 @@
     <img alt="Docs" src="https://github.com/disneystreaming/automated-cloud-advisor/workflows/Publish/badge.svg">
   </a>
 </p>
-
+<!-- NPM -->
 <p align="center">
   <a href="https://www.npmjs.com/package/automated-cloud-advisor">
     <img alt="npm latest version" src="https://img.shields.io/npm/v/automated-cloud-advisor">
@@ -39,7 +39,7 @@
     <img alt="devDependencies Status" src="https://david-dm.org/disneystreaming/automated-cloud-advisor/dev-status.svg">
   </a>
 </p>
-
+<!-- License -->
 <p align="center">
   <a href="https://github.com/semantic-release/semantic-release">
     <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
@@ -54,7 +54,7 @@
     <img alt="Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor" src="https://badges.gitter.im/Join%20Chat.svg">
   </a>
 </p>
-
+<!-- Code Quality -->
 <p align="center">
   <a href="https://snyk.io/test/github/disneystreaming/automated-cloud-advisor?targetFile=package.json">
     <img src="https://snyk.io/test/github/disneystreaming/automated-cloud-advisor/badge.svg?targetFile=package.json" alt="Known Vulnerabilities">
@@ -77,21 +77,22 @@
   </br></br>
   The tool is deployed as a set of cloudformation stacks that comprise the data collection and the data can be displayed in a Kibana dashboard.
 </p>
-
+<!-- Diagrams -->
 <p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/trusted_advisor.png" alt="Refresh">
 </p>
+
 <p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/index_data.png" alt="Index">
 </p>
+
 <p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/view_data.png" alt="Stream">
 </p>
-
+<!-- Dashboard -->
 <p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png" alt="Dashboard">
 </p>
-
 
 <h2 align="center">💻 Installation 💻</h2>
 
@@ -125,8 +126,6 @@
   Passing unit tests with 100% coverage
   </br>
 </p>
-
-
 
 <h2 align="center">📅 Maintenance Plan 📅</h2>
 
