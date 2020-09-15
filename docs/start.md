@@ -19,7 +19,7 @@ Automated Cloud Advisor helps with cost optimization by automating the collectio
 
 - Cost Optimization - Identify low utilized resources.
   - Example: Email resource owners, flag or decommission resources.
-- Performance - Identify resources that be be optimized.
+- Performance - Identify resources that can be optimized.
   - Example: Cloudfront is misconfigured and too many redirects.
 - Security - Identify security vulnerabilities.
   - Example: SGs are wide open, Some S3 buckets have public access.

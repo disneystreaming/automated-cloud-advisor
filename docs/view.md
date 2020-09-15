@@ -25,7 +25,7 @@ Select the URL and copy the reference of the index id.
 
 ## Update Widgets With Your Index ID
 
-Kibana source files
+Kibana source files can be downloaded from [github](https://github.com/disneystreaming/automated-cloud-advisor/tree/master/kibana).
 
 ```bash
 /kibana
@@ -41,6 +41,26 @@ Here is where you will need to make the update.
 
 ```json
 "references":[{
+    "id":"REPLACEME",
+    "name":"kibanaSavedObjectMeta.searchSourceJSON.index",
+    "type":"index-pattern"
+}, {
+    "id":"REPLACEME",
+    "name":"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+    "type":"index-pattern"
+}]
+```
+
+Here is a script to automate that with your index id.
+
+```bash
+sed -i '' 's/REPLACEME/58d1f820-9261-11ea-a73f-fbd0c112cb25/g' kibana/widgets/*
+```
+
+The files should now have reference to your index id.
+
+```json
+"references":[{
     "id":"58d1f820-9261-11ea-a73f-fbd0c112cb25",
     "name":"kibanaSavedObjectMeta.searchSourceJSON.index",
     "type":"index-pattern"
@@ -51,11 +71,6 @@ Here is where you will need to make the update.
 }]
 ```
 
-Here is a script to automate that.
-
-```bash
-sed -i '' 's/REPLACEME/58d1f820-9261-11ea-a73f-fbd0c112cb25/g' kibana/widgets/*
-```
 
 ## Upload Kibana Source Files
 

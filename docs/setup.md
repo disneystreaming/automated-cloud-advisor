@@ -92,15 +92,19 @@ Infrastructure configurations can be overwritten to tweak costs. Average estimat
     - 0 IOPS
     - 20 GB
 
-## Quick Setup
+## Installation
 
 You can either run this script or manually set up the infrastructure in the next few steps. The script assumes that [jq](https://stedolan.github.io/jq/) (a json parsing library) is installed on your system and that you have valid credentials that can be used to create AWS resources through CloudFormation.
 
 ```bash
-# Download installer
+# Download installer with npm -g
 npm i -g automated-cloud-advisor
 # Execute Binary
 automated-cloud-advisor
 ```
 
+You will be prompted theses questions:
+
 ![alt-text](/automated-cloud-advisor/img/installation.png)
+
+Now you can build the Kibana dashboard by clicking [here](https://disneystreaming.github.io/automated-cloud-advisor/docs/view).

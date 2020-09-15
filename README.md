@@ -1,12 +1,12 @@
 <h1 align="center">Automated-Cloud-Advisor</h1>
 
 <p align="center">
-    <img src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.png" alt="Logo">
+    <img src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.svg" alt="Logo">
 </p>
 
-<h3 align="center">
+<h2 align="center">
   👉 <a target="_blank" href="https://disneystreaming.github.io/automated-cloud-advisor/">Installation</a> 👈
-</h3>
+</h2>
 
 <p align="center">
   <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/issues/">
@@ -92,7 +92,7 @@ The tool is deployed as a set of cloudformation stacks that comprise the data co
 
 ## :computer: Installation :computer:
 
-Click [here](https://disneystreaming.github.io/automated-cloud-advisor/docs/setup) to view documentation on:
+Click [here](https://disneystreaming.github.io/automated-cloud-advisor) to view documentation on:
 
 - Prerequisites
 - Dependencies
@@ -101,23 +101,22 @@ Click [here](https://disneystreaming.github.io/automated-cloud-advisor/docs/setu
 
 ## :name_badge: Uninstall :name_badge:
 
-Using the stack name/id to delete by:
+Delete using the stack name/id with:
 
 - AWS console
 - AWS CLI
 
 ## :gift: Contribute :gift:
 
-- Sign the [CLA](https://gist.github.com/dss-osc/c0c1eefa0832609a3c62a9bd05c00b70)
+- Sign the [CLA](https://cla-assistant.io/disneystreaming/automated-cloud-advisor)
 - Submit pull request to the master branch
 
 ## :chart_with_upwards_trend: Coding Standards :chart_with_upwards_trend:
 
 - Documentation
-- Passing lint
-- Passing unit tests
-- Code coverage is at 100%
 - Up to date dependencies
+- Passing lint
+- Passing unit tests with 100% coverage
 
 ## :date: Maintenance Plan :date:
 
