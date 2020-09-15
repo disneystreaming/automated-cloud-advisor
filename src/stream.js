@@ -109,7 +109,7 @@ exports.handler = async (event) => {
         signRequest(request)
         await sendRequest(request)
       } catch (error) {
-        console.error(error)
+        console.error(document, error)
         throw error
       }
     }

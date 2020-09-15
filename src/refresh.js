@@ -27,7 +27,7 @@ exports.handler = async (event) => {
         .refreshTrustedAdvisorCheck(params)
         .promise()
     } catch (error) {
-      console.error(error)
+      console.error(id, error)
       throw error
     }
   }
