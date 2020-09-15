@@ -70,11 +70,13 @@
   </a>
 </p>
 
-## :speech_balloon: Motivation :speech_balloon:
+<h2 align="center">💬 Motivation 💬</h2>
 
-Automated Cloud Advisor is a extensible tool that aims at facilitating cost optimization in AWS, by collecting data for resources that are under utilized. In addition, this is a great learning tool for new DevOps/Cloud engineers that want to start automating things in AWS.
-
-The tool is deployed as a set of cloudformation stacks that comprise the data collection and the data can be displayed in a Kibana dashboard.
+<p align="center">
+  Automated Cloud Advisor is a extensible tool that aims at facilitating cost optimization in AWS, by collecting data for resources that are under utilized. In addition, this is a great learning tool for new DevOps/Cloud engineers that want to start automating things in AWS.
+  </br></br>
+  The tool is deployed as a set of cloudformation stacks that comprise the data collection and the data can be displayed in a Kibana dashboard.
+</p>
 
 <p align="center">
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/trusted_advisor.png" alt="Refresh">
@@ -90,36 +92,48 @@ The tool is deployed as a set of cloudformation stacks that comprise the data co
     <img src="https://disneystreaming.github.io/automated-cloud-advisor/img/kibana/dashboard/01-dashboard.png" alt="Dashboard">
 </p>
 
-## :computer: Installation :computer:
 
-Click [here](https://disneystreaming.github.io/automated-cloud-advisor) to view documentation on:
+<h2 align="center">💻 Installation 💻</h2>
 
-- Prerequisites
-- Dependencies
-- Requirements
-- Installation
+<p align="center">
+  <a href="https://disneystreaming.github.io/automated-cloud-advisor/">Get Started</a>
+</p>
 
-## :name_badge: Uninstall :name_badge:
+<h2 align="center">📛 Uninstall 📛</h2>
 
-Delete using the stack name/id with:
+<p align="center">
+  Delete Stack with the AWS Console/CLI
+</p>
 
-- AWS console
-- AWS CLI
+<h2 align="center">🎁 Contribute 🎁</h2>
 
-## :gift: Contribute :gift:
+<p align="center">
+  Sign the  <a href="https://disneystreaming.github.io/automated-cloud-advisor/">CLA</a>
+  </br>
+  Submit pull request to the master branch
+</p>
 
-- Sign the [CLA](https://cla-assistant.io/disneystreaming/automated-cloud-advisor)
-- Submit pull request to the master branch
+<h2 align="center">📈 Coding Standards 📈</h2>
 
-## :chart_with_upwards_trend: Coding Standards :chart_with_upwards_trend:
+<p align="center">
+  Documentation
+  </br>
+  Up to date dependencies
+  </br>
+  Passing lint with standard coding style
+  </br>
+  Passing unit tests with 100% coverage
+  </br>
+</p>
 
-- Documentation
-- Up to date dependencies
-- Passing lint
-- Passing unit tests with 100% coverage
 
-## :date: Maintenance Plan :date:
 
-- Submit pull request
-- Merge pull request to master
-- [Semantic Release](https://github.com/semantic-release/semantic-release) will publish new version
+<h2 align="center">📅 Maintenance Plan 📅</h2>
+
+<p align="center">
+  Submit pull request
+  </br>
+  Merge pull request to master
+  </br>
+  <a href="https://github.com/semantic-release/semantic-release">Semantic Release</a> will publish a new version
+</p>
