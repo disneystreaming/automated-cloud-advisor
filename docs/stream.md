@@ -177,7 +177,7 @@ Index: String
     Default: trusted-advisor
 ElasticsearchVersion: Number
     Description: ElasticSearch version
-    Default: 7.4
+    Default: 7.7
 DedicatedMasterType: String
     Description: Dedicated Master type
     Default: r5.large.elasticsearch
