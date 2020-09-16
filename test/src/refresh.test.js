@@ -24,7 +24,7 @@ describe('When the scheduled event is triggered', () => {
         expect(response).toBe(event)
         const calls = mockSupportHappy.Support.mock.results[0].value
           .refreshTrustedAdvisorCheck.mock.calls.length
-        expect(calls).toBe(5)
+        expect(calls).toBe(6)
       })
     })
 
