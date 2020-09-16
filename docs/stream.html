@@ -237,7 +237,7 @@ STREAM_STACK=$(aws cloudformation \
     create-stack \
     --region us-east-1 \
     --stack-name <span class="hljs-variable">$PREFIX</span>-<span class="hljs-variable">$STREAM_NAME</span> \
-    --template-body file://aws/stream.yml \
+    --template-body file://src/aws/stream.yml \
     --capabilities CAPABILITY_NAMED_IAM \
     --parameters ParameterKey=ResourcePrefix,ParameterValue=<span class="hljs-variable">$PREFIX</span> \
     ParameterKey=ResourceName,ParameterValue=<span class="hljs-variable">$STREAM_NAME</span> \
