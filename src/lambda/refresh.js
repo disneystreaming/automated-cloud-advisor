@@ -10,7 +10,8 @@ const CHECK_IDS = {
   'Low Utilization Amazon EC2 Instances': 'Qch7DwouX1',
   'Underutilized Amazon EBS Volumes': 'DAvU99Dc4C',
   'Unassociated Elastic IP Addresses': 'Z4AUBRNSmz',
-  'Idle Load Balancers': 'hjLMh88uM8'
+  'Idle Load Balancers': 'hjLMh88uM8',
+  'Underutilized Amazon Redshift Clusters': 'G31sQ1E9U'
 }
 /**
  * Triggers a refresh on Trusted Advisor Check to get an update on AWS resources
