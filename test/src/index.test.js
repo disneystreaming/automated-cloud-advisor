@@ -23,7 +23,7 @@ describe('When the pattern based event is triggered', () => {
 
     describe('When the event pattern is invalid', () => {
       beforeEach(() => {
-        handler = require('../../src/index').handler
+        handler = require('../../src/lambda/index').handler
       })
 
       it('Then it should skip the putItem', async () => {
@@ -35,7 +35,7 @@ describe('When the pattern based event is triggered', () => {
     describe('When the putItem API is successful', () => {
       beforeEach(() => {
         jest.mock('aws-sdk', () => mockDynamoDBHappy)
-        handler = require('../../src/index').handler
+        handler = require('../../src/lambda/index').handler
         process.env.DB_NAME = 'Table'
       })
 
@@ -55,7 +55,7 @@ describe('When the pattern based event is triggered', () => {
     describe('When the putItem API is unsucessful', () => {
       beforeEach(() => {
         jest.mock('aws-sdk', () => mockDynamoDBUnHappy)
-        handler = require('../../src/index').handler
+        handler = require('../../src/lambda/index').handler
       })
 
       it('Then it should throw an error', async () => {

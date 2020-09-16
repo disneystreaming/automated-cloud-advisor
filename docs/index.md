@@ -193,7 +193,7 @@ export INDEX_NAME=aca-index
 export S3_BUCKET=test-bucket
 export S3_KEY_INDEX=index.zip
 
-pushd src
+pushd src/lambda
     zip -X $S3_KEY_INDEX index.js
     aws s3 cp \
         $S3_KEY_INDEX s3://$S3_BUCKET

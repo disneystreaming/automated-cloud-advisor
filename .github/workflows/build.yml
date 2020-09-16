@@ -37,7 +37,7 @@ jobs:
           -Dsonar.projectKey=disneystreaming_automated-cloud-advisor
           -Dsonar.projectName=automated-cloud-advisor
           -Dsonar.sourceEncoding=UTF-8
-          -Dsonar.sources=src
+          -Dsonar.sources=src/lambda
           -Dsonar.tests=test
           -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
           -Dsonar.testExecutionReportPaths=coverage/test-report.xml
