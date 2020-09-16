@@ -9,15 +9,13 @@ const REGION = 'Region'
  * Converts cost string to a number
  * @param {Number} value
  */
-const convert = (value) => Math.floor(Number(value.split('$')[1]))
+const convert = (value) => Number(value.replace(/[$,]+/g, '')).toFixed(2)
 
 /**
  * Calculate ttl for DynamoDB Record
  */
 const ttl = () => {
-  const SECONDS_IN_AN_HOUR = 60 * 60
-  const DAY = 24
-  const TTL = DAY * SECONDS_IN_AN_HOUR
+  const TTL = 60 * 60
   const secondsSinceEpoch = Math.round(Date.now() / 1000)
   const expirationTime = secondsSinceEpoch + TTL
   return expirationTime.toString()
@@ -78,11 +76,11 @@ const CHECK_NAME = {
   ),
   'Unassociated Elastic IP Addresses': ({ 'IP Address': resourceName, Region: region }) => schema(
     {},
-    Number(0.01 * 731),
+    Number(0.01 * 731).toFixed(2),
     region,
-        `arn:aws:ec2:${region}:*:eip/${resourceName}`,
-        resourceName,
-        'eip'
+    `arn:aws:ec2:${region}:*:eip/${resourceName}`,
+    resourceName,
+    'eip'
   ),
   'Idle Load Balancers': (record, resourceId) => schema(
     { ...record },
@@ -127,7 +125,7 @@ exports.handler = async (event) => {
         .putItem(params)
         .promise()
     } catch (error) {
-      console.error(error)
+      console.error(checkItemDetail, Item, error)
       throw error
     }
   }
