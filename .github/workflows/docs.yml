@@ -42,4 +42,3 @@ jobs:
           git config --global user.name "gh-actions"
           npm ci
           npm run publish-gh-pages
-
