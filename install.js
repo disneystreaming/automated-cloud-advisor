@@ -6,6 +6,9 @@ const cmd = promisify(exec)
 
 const { prompt } = require('inquirer')
 
+const whenAllStacks = answers => answers.stacks === 'all'
+const whenAllServerless = answers => answers.stacks === 'serverless'
+
 // User prompts
 const prompts = [{
   type: 'list',
@@ -45,61 +48,61 @@ const prompts = [{
   type: 'input',
   name: 'refreshName',
   message: 'What is your Refresh Stack name',
-  when: answers => answers.stacks === 'all' || answers.stacks === 'serverless',
+  when: whenAllStacks || whenAllServerless,
   default: 'aca-refresh'
 }, {
   type: 'input',
   name: 'refreshKey',
   message: 'What is the S3 key for your Refresh Lambda',
-  when: answers => answers.stacks === 'all' || answers.stacks === 'serverless',
+  when: whenAllStacks || whenAllServerless,
   default: 'refresh.zip'
 }, {
   type: 'input',
   name: 'indexName',
   message: 'What is your Index Stack name',
-  when: answers => answers.stacks === 'all' || answers.stacks === 'serverless',
+  when: whenAllStacks || whenAllServerless,
   default: 'aca-index'
 }, {
   type: 'input',
   name: 'indexKey',
   message: 'What is the S3 key for your Index Lambda',
-  when: answers => answers.stacks === 'all' || answers.stacks === 'serverless',
+  when: whenAllStacks || whenAllServerless,
   default: 'index.zip'
 }, {
   type: 'input',
   name: 'streamName',
   message: 'What is your Stream Stack name',
-  when: answers => answers.stacks === 'all',
+  when: whenAllStacks,
   default: 'aca-stream'
 }, {
   type: 'input',
   name: 'streamKey',
   message: 'What is the S3 key for your Stream Lambda',
-  when: answers => answers.stacks === 'all',
+  when: whenAllStacks,
   default: 'stream.zip'
 }, {
   type: 'input',
   name: 'subnet1',
   message: 'What is the value for Subnet 1',
-  when: answers => answers.stacks === 'all',
+  when: whenAllStacks,
   default: 'subnet-xxxxxxx1'
 }, {
   type: 'input',
   name: 'subnet2',
   message: 'What is the value for Subnet 2',
-  when: answers => answers.stacks === 'all',
+  when: whenAllStacks,
   default: 'subnet-xxxxxxx2'
 }, {
   type: 'input',
   name: 'sgLambda',
   message: 'What is the Security Group for the Lambda',
-  when: answers => answers.stacks === 'all',
+  when: whenAllStacks,
   default: 'sg-xxxxxxla'
 }, {
   type: 'input',
   name: 'sgEs',
   message: 'What is the Security Group for the Elastic Search',
-  when: answers => answers.stacks === 'all',
+  when: whenAllStacks,
   default: 'sg-xxxxxxes'
 }]
 
