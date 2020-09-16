@@ -204,7 +204,7 @@ const deployCFT = async ({ prefix, name, s3Bucket, s3KeyParam, s3Key, file, prof
         ${profile} \\
         --region us-east-1 \\
         --stack-name ${prefix}-${name} \\
-        --template-body file://$(npm root -g)/automated-cloud-advisor/aws/${file}.yml \\
+        --template-body file://$(npm root -g)/automated-cloud-advisor/src/aws/${file}.yml \\
         --capabilities CAPABILITY_NAMED_IAM \\
         --parameters ParameterKey=ResourcePrefix,ParameterValue=${prefix} \\
         ParameterKey=ResourceName,ParameterValue=${name} \\

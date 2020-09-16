@@ -248,7 +248,7 @@ STREAM_STACK=$(aws cloudformation \
     create-stack \
     --region us-east-1 \
     --stack-name $PREFIX-$STREAM_NAME \
-    --template-body file://aws/stream.yml \
+    --template-body file://src/aws/stream.yml \
     --capabilities CAPABILITY_NAMED_IAM \
     --parameters ParameterKey=ResourcePrefix,ParameterValue=$PREFIX \
     ParameterKey=ResourceName,ParameterValue=$STREAM_NAME \

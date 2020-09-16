@@ -8,13 +8,17 @@
     "url": "https://github.com/disneystreaming/automated-cloud-advisor.git"
   },
   "license": "Apache-2.0",
+  "keywords": [
+    "aws",
+    "devops",
+    "automation",
+    "cloud"
+  ],
   "directories": {
     "doc": "docs"
   },
   "files": [
     "src",
-    "aws",
-    "kibana",
     "install.js"
   ],
   "bin": "./install.js",
