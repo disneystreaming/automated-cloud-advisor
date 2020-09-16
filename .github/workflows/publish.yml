@@ -7,6 +7,43 @@ on:
       - master
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Node Setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm t
+
+      - name: Setup sonarqube
+        uses: warchant/setup-sonar-scanner@v1
+
+      - name: Run sonarqube
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        run: sonar-scanner
+          -Dsonar.host.url=https://sonarcloud.io/
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          -Dsonar.organization=disneystreaming
+          -Dsonar.projectKey=disneystreaming_automated-cloud-advisor
+          -Dsonar.projectName=automated-cloud-advisor
+          -Dsonar.sourceEncoding=UTF-8
+          -Dsonar.sources=src/lambda
+          -Dsonar.tests=test
+          -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+          -Dsonar.testExecutionReportPaths=coverage/test-report.xml
   publish:
     runs-on: ubuntu-latest
     steps:
