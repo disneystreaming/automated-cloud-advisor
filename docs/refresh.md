@@ -94,17 +94,6 @@ S3KeyRefresh: String
     Description: S3 key reference
 ```
 
-### Optional
-
-```yml
-ScheduleExpression: String
-    Description: Scheduled Cron
-    AllowedValues:
-        - 1 hour
-        - 12 hours
-    Default: 1 hour
-```
-
 ## Outputs
 
 ```yml
@@ -140,7 +129,7 @@ INDEX_STACK=$(aws cloudformation \
     create-stack \
     --region us-east-1 \
     --stack-name $PREFIX-$INDEX_NAME \
-    --template-body file://aws/index.yml \
+    --template-body file://src/aws/index.yml \
     --capabilities CAPABILITY_NAMED_IAM \
     --parameters ParameterKey=ResourcePrefix,ParameterValue=$PREFIX \
     ParameterKey=ResourceName,ParameterValue=$INDEX_NAME \

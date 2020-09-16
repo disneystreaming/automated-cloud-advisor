@@ -139,6 +139,17 @@ TimeToLiveSpecification:
     Enabled: true
 ```
 
+The TTL will be set to one hour.
+
+```js
+const ttl = () => {
+  const secondsInAHour = 60 * 60
+  const secondsSinceEpoch = Math.round(Date.now() / 1000)
+  const expirationTime = secondsSinceEpoch + secondsInAHour
+  return expirationTime.toString()
+}
+```
+
 ## Parameters
 
 ### Required
@@ -193,7 +204,7 @@ INDEX_STACK=$(aws cloudformation \
     create-stack \
     --region us-east-1 \
     --stack-name $PREFIX-$INDEX_NAME \
-    --template-body file://aws/index.yml \
+    --template-body file://src/aws/index.yml \
     --capabilities CAPABILITY_NAMED_IAM \
     --parameters ParameterKey=ResourcePrefix,ParameterValue=$PREFIX \
     ParameterKey=ResourceName,ParameterValue=$INDEX_NAME \

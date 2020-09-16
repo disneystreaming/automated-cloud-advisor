@@ -16,9 +16,6 @@ Parameters:
     ScheduleExpression:
         Type: String
         Description: Scheduled Cron
-        AllowedValues:
-            - 1 hour
-            - 12 hours
         Default: 1 hour
 
 Resources:

@@ -13,11 +13,12 @@ const convert = (value) => Number(value.replace(/[$,]+/g, '')).toFixed(2)
 
 /**
  * Calculate ttl for DynamoDB Record
+ * @returns {String}
  */
 const ttl = () => {
-  const TTL = 60 * 60
+  const secondsInAHour = 60 * 60
   const secondsSinceEpoch = Math.round(Date.now() / 1000)
-  const expirationTime = secondsSinceEpoch + TTL
+  const expirationTime = secondsSinceEpoch + secondsInAHour
   return expirationTime.toString()
 }
 
@@ -60,10 +61,10 @@ const CHECK_NAME = {
     return schema(
       { ...record },
       convert(record[COST]),
-            `${country}-${code}-${zone}`,
-            resourceId,
-            record['Instance ID'],
-            'ec2'
+      `${country}-${code}-${zone}`,
+      resourceId,
+      record['Instance ID'],
+      'ec2'
     )
   },
   'Underutilized Amazon EBS Volumes': (record, resourceId) => schema(
