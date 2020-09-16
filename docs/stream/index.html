@@ -226,7 +226,7 @@ signRequest(request);
 <span class="hljs-built_in">export</span> SG_ES=<span class="hljs-string">"sg-12345"</span>
 <span class="hljs-built_in">export</span> SUBNET_IDS=<span class="hljs-string">"subnet-1234567\,subnet-7654321"</span>
 
-<span class="hljs-built_in">pushd</span> src
+<span class="hljs-built_in">pushd</span> src/lambda
     zip -X <span class="hljs-variable">$S3_KEY_STREAM</span> stream.js
     aws s3 cp \
         <span class="hljs-variable">$S3_KEY_STREAM</span> s3://<span class="hljs-variable">$S3_BUCKET</span>

@@ -133,7 +133,7 @@
 <span class="hljs-built_in">export</span> S3_BUCKET=<span class="hljs-built_in">test</span>-bucket
 <span class="hljs-built_in">export</span> S3_KEY_REFRESH=refresh.zip
 
-<span class="hljs-built_in">pushd</span> src
+<span class="hljs-built_in">pushd</span> src/lambda
     zip -X <span class="hljs-variable">$S3_KEY_INDEX</span> index.js
     aws s3 cp \
         <span class="hljs-variable">$S3_KEY_INDEX</span> s3://<span class="hljs-variable">$S3_BUCKET</span>
