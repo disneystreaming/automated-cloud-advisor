@@ -18,16 +18,14 @@
     "doc": "docs"
   },
   "files": [
-    "src",
-    "install.js"
+    "src"
   ],
-  "bin": "./install.js",
-  "main": "install.js",
+  "bin": "./src/install.js",
+  "main": "src/install.js",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "jest",
-    "test:coverage": "jest && codecov"
+    "test": "jest"
   },
   "dependencies": {
     "inquirer": "^7.2.0"
@@ -35,7 +33,6 @@
   "devDependencies": {
     "aws-sdk": "^2.673.0",
     "babel-eslint": "^10.1.0",
-    "codecov": "^3.7.2",
     "eslint": "^7.0.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
@@ -45,9 +42,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^26.0.1",
-    "jest-sonar-reporter": "^2.0.0",
-    "lint": "^0.7.0",
-    "semantic-release": "^17.1.1"
+    "lint": "^0.7.0"
   },
   "eslintConfig": {
     "extends": "standard",
@@ -71,14 +66,10 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testResultsProcessor": "jest-sonar-reporter",
     "collectCoverage": true,
     "silent": true,
-    "projects": [
-      "src"
-    ],
     "collectCoverageFrom": [
-      "src/**/*.js"
+      "src/lambda/*.js"
     ],
     "coverageThreshold": {
       "global": {
@@ -88,9 +79,5 @@
         "statements": 100
       }
     }
-  },
-  "jestSonar": {
-    "reportPath": "coverage",
-    "reportFile": "test-report.xml"
   }
 }
