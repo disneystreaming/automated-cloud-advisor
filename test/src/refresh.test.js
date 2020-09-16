@@ -16,7 +16,7 @@ describe('When the scheduled event is triggered', () => {
     describe('When the refresh API is successful', () => {
       beforeEach(() => {
         jest.mock('aws-sdk', () => mockSupportHappy)
-        handler = require('../../src/refresh').handler
+        handler = require('../../src/lambda/refresh').handler
       })
 
       it('Then it should invoke the refresh api', async () => {
@@ -31,7 +31,7 @@ describe('When the scheduled event is triggered', () => {
     describe('When the refresh API is unsuccessful', () => {
       beforeEach(() => {
         jest.mock('aws-sdk', () => mockSupportUnHappy)
-        handler = require('../../src/refresh').handler
+        handler = require('../../src/lambda/refresh').handler
       })
 
       it('Then it should throw an error', async () => {

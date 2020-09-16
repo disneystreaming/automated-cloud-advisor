@@ -184,7 +184,7 @@ const execute = async (command) => {
  * @returns {String}
  */
 const zipToS3 = async ({ s3Bucket, s3Key, file, profile = '' }) => await execute(`
-    pushd $(npm root -g)/automated-cloud-advisor/src
+    pushd $(npm root -g)/automated-cloud-advisor/src/lambda
         zip -X ${s3Key} ${file}.js
         aws s3 cp \\
             ${profile} \\

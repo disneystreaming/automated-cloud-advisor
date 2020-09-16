@@ -237,7 +237,7 @@ export SG_LAMBDA="sg-54321"
 export SG_ES="sg-12345"
 export SUBNET_IDS="subnet-1234567\,subnet-7654321"
 
-pushd src
+pushd src/lambda
     zip -X $S3_KEY_STREAM stream.js
     aws s3 cp \
         $S3_KEY_STREAM s3://$S3_BUCKET

@@ -21,7 +21,7 @@ View the Index pattern.
 
 ## Upload Kibana Source Files
 
-Kibana source dashboard can be downloaded from [github](https://github.com/disneystreaming/automated-cloud-advisor/tree/master/src/kibana/dashboard.ndjson).
+The Kibana dashboard can be downloaded from [github](https://github.com/disneystreaming/automated-cloud-advisor/tree/master/src/kibana/dashboard.ndjson).
 
 Go to the Management page and click on Saved Objects.
 > https://`ElasticSearchDomainEndpoint`/_plugin/kibana/app/kibana#/management/kibana/objects?_g=()
