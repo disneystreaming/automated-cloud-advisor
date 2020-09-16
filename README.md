@@ -62,9 +62,9 @@
   <a href="https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor">
     <img alt="Sonar Quality" src="https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status">
   </a>
-  <a href="https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor">
-    <img alt="Sonar Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=coverage">
-  </a>
+<a href="https://codecov.io/gh/disneystreaming/automated-cloud-advisor">
+  <img src="https://codecov.io/gh/disneystreaming/automated-cloud-advisor/branch/master/graph/badge.svg" />
+</a>
   <a href="http://standardjs.com">
     <img alt="js-standard-style" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg">
   </a>

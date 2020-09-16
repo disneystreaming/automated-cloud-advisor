@@ -22,4 +22,6 @@ jobs:
         run: npm run lint
 
       - name: Test
-        run: npm t
+        run: npm run test:coverage
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
