@@ -5,7 +5,7 @@ const {
   zipToS3,
   deployCFT,
   waitForCFT
-} = require('./cmd')
+} = require('./command')
 
 /**
  * Zips lambda files to S3 and run cloudformation commands through the AWS CLI

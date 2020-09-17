@@ -3,11 +3,11 @@
     "id": "06f165b6-f3e9-f78c-d34b-397559e64aba",
     "detail-type": "Scheduled Event",
     "source": "aws.events",
-    "account": "789659335040",
+    "account": "123456789012",
     "time": "2020-05-09T19:47:22Z",
     "region": "us-east-1",
     "resources": [
-      "arn:aws:events:us-east-1:789659335040:rule/prefix-RefreshData"
+      "arn:aws:events:us-east-1:123456789012:rule/prefix-RefreshData"
     ],
     "detail": {}
   }
