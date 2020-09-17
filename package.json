@@ -1,6 +1,6 @@
 {
   "name": "automated-cloud-advisor",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "ayyazakhtar1@gmail.com",
   "description": "Automated Cloud Advisor",
   "repository": {
@@ -20,11 +20,12 @@
   "files": [
     "src"
   ],
-  "bin": "./src/install.js",
-  "main": "src/install.js",
+  "bin": "./src/install/index.js",
+  "main": "src/index/index.js",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "start": "node src/install/index.js",
     "test": "jest"
   },
   "dependencies": {
