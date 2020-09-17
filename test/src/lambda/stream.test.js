@@ -2,13 +2,13 @@ const {
   insert,
   invalid,
   remove
-} = require('../events/stream')
+} = require('../../events/stream')
 
 const {
   happy: mockAWSHappy,
   unhappy: mockAWSUnHappy,
   eventEmitter
-} = require('../mocks/stream')
+} = require('../../mocks/stream')
 
 describe('When the batch stream event is triggered', () => {
   let handler
@@ -27,7 +27,7 @@ describe('When the batch stream event is triggered', () => {
 
     describe('When the event name is invalid', () => {
       beforeEach(() => {
-        handler = require('../../src/lambda/stream').handler
+        handler = require('../../../src/lambda/stream').handler
       })
 
       it('Then it should skip the request', async () => {
@@ -39,7 +39,7 @@ describe('When the batch stream event is triggered', () => {
     describe('When the handleRequest API is successful', () => {
       beforeEach(() => {
         jest.mock('aws-sdk', () => mockAWSHappy)
-        handler = require('../../src/lambda/stream').handler
+        handler = require('../../../src/lambda/stream').handler
         process.env.DOMAIN = 'endpoint.com'
         process.env.INDEX = 'trusted-advisor'
         process.env.REGION = 'us-east-1'
@@ -70,7 +70,7 @@ describe('When the batch stream event is triggered', () => {
     describe('When the handleRequest API is unsuccessful', () => {
       beforeEach(() => {
         jest.mock('aws-sdk', () => mockAWSUnHappy)
-        handler = require('../../src/lambda/stream').handler
+        handler = require('../../../src/lambda/stream').handler
       })
 
       it('Then it should throw an error', async () => {
