@@ -9,6 +9,79 @@ const { prompt } = require('inquirer')
 const whenAllStacks = answers => answers.stacks === 'all'
 const whenAllServerless = answers => answers.stacks === 'serverless'
 
+const mapTuple = ([name, message, defaultValue]) => ({
+  name,
+  message,
+  default: defaultValue
+})
+
+const addInputType = (prompt) => ({
+  type: 'input',
+  ...prompt
+})
+
+const addWhenAllStacksOrServerless = (prompt) => ({
+  when: whenAllStacks || whenAllServerless,
+  ...prompt
+})
+
+const addWhenAllStacks = (prompt) => ({
+  when: whenAllStacks,
+  ...prompt
+})
+
+const refreshPrompts = [[
+  'refreshName',
+  'What is your Refresh Stack name',
+  'aca-refresh'
+], [
+  'refreshKey',
+  'What is the S3 key for your Refresh Lambda',
+  'refresh.zip'
+]].map(mapTuple)
+  .map(addInputType)
+  .map(addWhenAllStacksOrServerless)
+
+const indexPrompts = [[
+  'indexName',
+  'What is your Index Stack name',
+  'aca-index'
+], [
+  'indexKey',
+  'What is the S3 key for your Index Lambda',
+  'index.zip'
+]].map(mapTuple)
+  .map(addInputType)
+  .map(addWhenAllStacksOrServerless)
+
+const streamPrompts = [[
+  'streamName',
+  'What is your Stream Stack name',
+  'aca-stream'
+], [
+  'streamKey',
+  'What is the S3 key for your Stream Lambda',
+  'stream.zip'
+], [
+  'subnet1',
+  'What is the value for Subnet 1',
+  'subnet-xxxxxxx1'
+], [
+  'subnet2',
+  'What is the value for Subnet 2',
+  'subnet-xxxxxxx2'
+], [
+  'sgLambda',
+  'What is the Security Group for the Lambda',
+  'sg-xxxxxxla'
+], [
+  'sgEs',
+  'What is the Security Group for the Elastic Search',
+  'sg-xxxxxxes'
+]].map(mapTuple)
+  .map(addInputType)
+  .map(addWhenAllStacks)
+
 // User prompts
 const prompts = [{
   type: 'list',
@@ -44,67 +117,11 @@ const prompts = [{
   name: 'prefix',
   message: 'What prefix do you want on your infrastructure',
   default: 'teamName'
-}, {
-  type: 'input',
-  name: 'refreshName',
-  message: 'What is your Refresh Stack name',
-  when: whenAllStacks || whenAllServerless,
-  default: 'aca-refresh'
-}, {
-  type: 'input',
-  name: 'refreshKey',
-  message: 'What is the S3 key for your Refresh Lambda',
-  when: whenAllStacks || whenAllServerless,
-  default: 'refresh.zip'
-}, {
-  type: 'input',
-  name: 'indexName',
-  message: 'What is your Index Stack name',
-  when: whenAllStacks || whenAllServerless,
-  default: 'aca-index'
-}, {
-  type: 'input',
-  name: 'indexKey',
-  message: 'What is the S3 key for your Index Lambda',
-  when: whenAllStacks || whenAllServerless,
-  default: 'index.zip'
-}, {
-  type: 'input',
-  name: 'streamName',
-  message: 'What is your Stream Stack name',
-  when: whenAllStacks,
-  default: 'aca-stream'
-}, {
-  type: 'input',
-  name: 'streamKey',
-  message: 'What is the S3 key for your Stream Lambda',
-  when: whenAllStacks,
-  default: 'stream.zip'
-}, {
-  type: 'input',
-  name: 'subnet1',
-  message: 'What is the value for Subnet 1',
-  when: whenAllStacks,
-  default: 'subnet-xxxxxxx1'
-}, {
-  type: 'input',
-  name: 'subnet2',
-  message: 'What is the value for Subnet 2',
-  when: whenAllStacks,
-  default: 'subnet-xxxxxxx2'
-}, {
-  type: 'input',
-  name: 'sgLambda',
-  message: 'What is the Security Group for the Lambda',
-  when: whenAllStacks,
-  default: 'sg-xxxxxxla'
-}, {
-  type: 'input',
-  name: 'sgEs',
-  message: 'What is the Security Group for the Elastic Search',
-  when: whenAllStacks,
-  default: 'sg-xxxxxxes'
-}]
+},
+...refreshPrompts,
+...indexPrompts,
+...streamPrompts
+]
 
 /**
  * Build params for the stacks
@@ -157,9 +174,9 @@ const answerPrompt = async () => {
     s3KeyParam: 'S3KeyStream',
     file: 'stream',
     additionalParameters: `ParameterKey=StreamARN,ParameterValue=${`${prefix}-${indexName}-StreamArn`} \\
-        ParameterKey=SecurityGroupIdsLambda,ParameterValue=${sgLambda} \\
-        ParameterKey=SecurityGroupIdsES,ParameterValue=${sgEs} \\
-        ParameterKey=SubnetIds,ParameterValue="${`${subnet1}\\,${subnet2}`}"`
+            ParameterKey=SecurityGroupIdsLambda,ParameterValue=${sgLambda} \\
+            ParameterKey=SecurityGroupIdsES,ParameterValue=${sgEs} \\
+            ParameterKey=SubnetIds,ParameterValue="${`${subnet1}\\,${subnet2}`}"`
   }
 
   return [
