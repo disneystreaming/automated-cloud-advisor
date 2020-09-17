@@ -57,42 +57,40 @@ Infrastructure configurations can be overwritten to tweak costs. Average estimat
 
 [Lambda](https://aws.amazon.com/lambda/pricing/) - Less than $1 per month
 
-- Refresh
-  - 128mb
-  - Avg Execution 1000ms
-  - Avg Concurrency 1
-- Index
-  - 128mb
-  - Avg Execution 500ms
-  - Avg Concurrency 100
-- Stream
-  - 128mb
-  - Avg Execution 50ms
-  - Avg Concurrency 4
+|Average    |Refresh|Index|Stream|
+|-----------|-------|-----|-----|
+|Memory     |128mb  |128mb|128mb|
+|Execution  |1000ms |500ms|50ms |
+|Concurrency|1      |100  |4    |
 
 [DynamoDB](https://aws.amazon.com/dynamodb/pricing/) - Less than $1 per month.
 
 - Read/Write - BillingMode is set to PAY_PER_REQUEST
-  - Read
-    - 0 Consume
-  - Write
-    - Avg Consume 4
-- DB Stream
-  - Avg Batch 1,100 bytes
+
+|Average|Read|Write|
+|-------|----|-----|
+|Consume|0   |4    |
+
+|Average|Stream   |
+|-------|---------|
+|Batch|1,100 bytes|
 
 [ElasticSearch](https://aws.amazon.com/elasticsearch-service/pricing/?nc=sn&loc=3) - Less than $1,000 per month.
 
-- Custer
-  - EC2
-    - Master - 3
-      - r5.large.elasticsearch
-    - Instance - 2
-      - r5.large.elasticsearch
-  - EBS - gp2
-    - 0 IOPS
-    - 20 GB
+|Custer  |Master                |Nodes                 |
+|--------|----------------------|----------------------|
+|Type    |r5.large.elasticsearch|r5.large.elasticsearch|
+|Instance|3                     |2                     |
+
+|       |EBS|
+|-------|---|
+|type   |gp2|
+|IOPS   |0  |
+|GB     |20 |
 
 ## Installation
+
+### Quick Setup
 
 You can either run this script or manually set up the infrastructure in the next few steps. The script assumes that [jq](https://stedolan.github.io/jq/) (a json parsing library) is installed on your system and that you have valid credentials that can be used to create AWS resources through CloudFormation.
 
@@ -108,3 +106,14 @@ You will be prompted theses questions:
 ![alt-text](/automated-cloud-advisor/img/installation.png)
 
 Now you can build the Kibana dashboard by clicking [here](https://disneystreaming.github.io/automated-cloud-advisor/docs/view).
+
+### Manual Setup
+
+```bash
+# Clone the repo
+git clone git@github.com:disneystreaming/automated-cloud-advisor.git
+# Change directory to the repo
+cd automated-cloud-advisor
+```
+
+Go to the next page ->

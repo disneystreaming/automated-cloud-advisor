@@ -28,4 +28,4 @@ Automated Cloud Advisor helps with cost optimization by automating the collectio
 - Service Limit - Identify when near maxing service limits.
   - Example: When S3 buckets reach the max limit of 1000.
 
-Automated Cloud Advisor uses these categories and provides insight via relevant widgets in a Kibana dashboard.
+Automated Cloud Advisor uses the Cost Optimization data and provides insight via relevant widgets in a Kibana dashboard.
