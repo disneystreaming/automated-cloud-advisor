@@ -1,6 +1,6 @@
 {
   "name": "automated-cloud-advisor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "ayyazakhtar1@gmail.com",
   "description": "Automated Cloud Advisor",
   "repository": {
@@ -182,9 +182,12 @@
           "assets": "pack/*.tgz"
         }
       ],
-      ["@semantic-release/changelog", {
-        "changelogFile": "docs/CHANGELOG.md"
-      }],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.md"
+        }
+      ],
       [
         "@semantic-release/git",
         {
