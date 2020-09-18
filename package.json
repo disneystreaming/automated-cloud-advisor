@@ -48,7 +48,8 @@
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.3.0",
     "jest": "^26.0.1",
-    "lint": "^0.7.0"
+    "lint": "^0.7.0",
+    "semantic-release": "^17.1.2"
   },
   "eslintConfig": {
     "extends": "standard",
@@ -103,10 +104,17 @@
     ],
     "plugins": [
       [
-        "@semantic-release/commit-analyzer", {
+        "@semantic-release/commit-analyzer",
+        {
           "releaseRules": [
-            {"type": "docs", "release": "patch"},
-            {"type": "refactor", "release": "patch"}
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            }
           ]
         }
       ],
@@ -115,17 +123,50 @@
         {
           "preset": "conventionalcommits",
           "types": [
-            {"type": "feat", "section": "Features"},
-            {"type": "fix", "section": "Bug Fixes"},
-            {"type": "docs", "section": "Documentation"},
-            {"type": "chore", "hidden": true},
-            {"type": "style", "hidden": true},
-            {"type": "refactor", "hidden": true},
-            {"type": "perf", "hidden": true},
-            {"type": "test", "hidden": true},
-            {"type": "build", "hidden": true},
-            {"type": "ci", "hidden": true},
-            {"type": "revert", "hidden": true}
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "docs",
+              "section": "Documentation"
+            },
+            {
+              "type": "chore",
+              "hidden": true
+            },
+            {
+              "type": "style",
+              "hidden": true
+            },
+            {
+              "type": "refactor",
+              "hidden": true
+            },
+            {
+              "type": "perf",
+              "hidden": true
+            },
+            {
+              "type": "test",
+              "hidden": true
+            },
+            {
+              "type": "build",
+              "hidden": true
+            },
+            {
+              "type": "ci",
+              "hidden": true
+            },
+            {
+              "type": "revert",
+              "hidden": true
+            }
           ]
         }
       ],
