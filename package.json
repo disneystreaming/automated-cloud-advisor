@@ -170,12 +170,7 @@
           ]
         }
       ],
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "docs/CHANGELOG.md"
-        }
-      ],
+      ["@semantic-release/changelog"],
       [
         "@semantic-release/npm",
         {
