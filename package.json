@@ -170,6 +170,9 @@
           ]
         }
       ],
+      ["@semantic-release/changelog", {
+        "changelogFile": "docs/CHANGELOG.md"
+      }],
       [
         "@semantic-release/npm",
         {
@@ -180,12 +183,6 @@
         "@semantic-release/github",
         {
           "assets": "pack/*.tgz"
-        }
-      ],
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "docs/CHANGELOG.md"
         }
       ],
       [
