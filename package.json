@@ -34,6 +34,8 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "aws-sdk": "^2.673.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.0.0",
@@ -101,8 +103,12 @@
       "main"
     ],
     "plugins": [
-      ["@semantic-release/commit-analyzer"],
-      ["@semantic-release/release-notes-generator", {
+      [
+        "@semantic-release/commit-analyzer"
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
           "preset": "angular",
           "parserOpts": {
             "noteKeywords": [
@@ -117,20 +123,30 @@
               "scope"
             ]
           }
-      }],
-      ["@semantic-release/npm", {
-        "tarballDir": "pack"
-      }],
-      ["@semantic-release/github", {
-        "assets": "pack/*.tgz"
-      }],
-      ["@semantic-release/git", {
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "tarballDir": "pack"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": "pack/*.tgz"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
           "assets": [
             "CHANGELOG.md",
             "package.json"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }]
+        }
+      ]
     ]
   }
 }
