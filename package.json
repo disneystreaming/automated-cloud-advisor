@@ -99,30 +99,34 @@
   },
   "release": {
     "branches": [
-      "master",
       "main"
     ],
     "plugins": [
       [
-        "@semantic-release/commit-analyzer"
+        "@semantic-release/commit-analyzer", {
+          "releaseRules": [
+            {"type": "docs", "release": "patch"},
+            {"type": "refactor", "release": "patch"}
+          ]
+        }
       ],
       [
         "@semantic-release/release-notes-generator",
         {
-          "preset": "angular",
-          "parserOpts": {
-            "noteKeywords": [
-              "BREAKING CHANGE",
-              "BREAKING CHANGES",
-              "BREAKING"
-            ]
-          },
-          "writerOpts": {
-            "commitsSort": [
-              "subject",
-              "scope"
-            ]
-          }
+          "preset": "conventionalcommits",
+          "types": [
+            {"type": "feat", "section": "Features"},
+            {"type": "fix", "section": "Bug Fixes"},
+            {"type": "docs", "section": "Documentation"},
+            {"type": "chore", "hidden": true},
+            {"type": "style", "hidden": true},
+            {"type": "refactor", "hidden": true},
+            {"type": "perf", "hidden": true},
+            {"type": "test", "hidden": true},
+            {"type": "build", "hidden": true},
+            {"type": "ci", "hidden": true},
+            {"type": "revert", "hidden": true}
+          ]
         }
       ],
       [
@@ -144,7 +148,7 @@
             "CHANGELOG.md",
             "package.json"
           ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+          "message": "chore(release): ${nextRelease.version} \n\n${nextRelease.notes}"
         }
       ]
     ]
