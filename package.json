@@ -32,6 +32,8 @@
     "inquirer": "^7.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "aws-sdk": "^2.673.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.0.0",
@@ -42,6 +44,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
     "jest": "^26.0.1",
     "lint": "^0.7.0"
   },
@@ -80,5 +83,54 @@
         "statements": 100
       }
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm t",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "branches": [
+      "master",
+      "main"
+    ],
+    "plugins": [
+      ["@semantic-release/commit-analyzer"],
+      ["@semantic-release/release-notes-generator", {
+          "preset": "angular",
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES",
+              "BREAKING"
+            ]
+          },
+          "writerOpts": {
+            "commitsSort": [
+              "subject",
+              "scope"
+            ]
+          }
+      }],
+      ["@semantic-release/npm", {
+        "tarballDir": "pack"
+      }],
+      ["@semantic-release/github", {
+        "assets": "pack/*.tgz"
+      }],
+      ["@semantic-release/git", {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }]
+    ]
   }
 }
