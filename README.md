@@ -111,7 +111,7 @@
 <p align="center">
   Sign the  <a href="https://disneystreaming.github.io/automated-cloud-advisor/">CLA</a>
   </br>
-  Submit pull request to the master branch
+  Submit pull request to the main branch
 </p>
 
 <h2 align="center">📈 Coding Standards 📈</h2>
@@ -132,7 +132,7 @@
 <p align="center">
   Submit pull request
   </br>
-  Merge pull request to master
+  Merge pull request to the main branch
   </br>
   <a href="https://github.com/semantic-release/semantic-release">Semantic Release</a> will publish a new version
 </p>
