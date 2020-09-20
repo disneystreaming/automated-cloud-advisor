@@ -1,7 +1,7 @@
 <h1 align="center">Automated-Cloud-Advisor</h1>
 <!-- Logo -->
 <p align="center">
-    <img width="200px"  src="https://github.com/disneystreaming/automated-cloud-advisor/raw/master/website/static/img/logo.svg" alt="Logo">
+    <img width="200px"  src="https://github.com/disneystreaming/automated-cloud-advisor/raw/main/website/static/img/logo.svg" alt="Logo">
 </p>
 <!-- Install -->
 <h2 align="center">
