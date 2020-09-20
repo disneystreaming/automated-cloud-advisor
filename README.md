@@ -33,7 +33,7 @@
     <img alt="npm latest version" src="https://img.shields.io/npm/v/automated-cloud-advisor">
   </a>
   <a href="https://www.npmjs.com/package/automated-cloud-advisor">
-    <img alt="dependencies Status" src="https://img.shields.io/david/dev/disneystreaming/automated-cloud-advisor">
+    <img alt="dependencies Status" src="https://img.shields.io/david/disneystreaming/automated-cloud-advisor">
   </a>
   <a href="https://www.npmjs.com/package/automated-cloud-advisor">
     <img alt="devDependencies Status" src="https://img.shields.io/david/dev/disneystreaming/automated-cloud-advisor?label=devDependencies">
