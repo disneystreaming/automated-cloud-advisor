@@ -66,7 +66,7 @@ const remove = {
         Keys: {
           id: { S: 'ebs-us-east-1-vol-123456789012' },
           updatedTime: { N: '1589136894406' },
-          fakeKey: { B: 'true' }
+          fakeKey: { BOOL: 'true' }
         }
       },
       eventSourceARN: 'arn:aws:dynamodb:us-east-1:123456789012:table/xxxxxxxxxx/stream/2020-05-08T23:36:37.039'
