@@ -10,63 +10,63 @@
 <!-- Repo -->
 <p align="center">
   <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/issues/">
-    <img alt="Issues" src="https://img.shields.io/github/issues/disneystreaming/automated-cloud-advisor.svg">
+    <img alt="Issues" src="https://img.shields.io/github/issues/disneystreaming/automated-cloud-advisor.svg?logo=github&cache_seconds=86400">
   </a>
   <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/pull/">
-    <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/disneystreaming/automated-cloud-advisor.svg">
+    <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/disneystreaming/automated-cloud-advisor.svg?logo=github&cache_seconds=86400">
 </p>
 <!-- Workflow -->
 <p align="center">
   <a href="https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3ABuild">
-    <img alt="Build" src="https://github.com/disneystreaming/automated-cloud-advisor/workflows/Build/badge.svg">
+    <img alt="Build" src="https://img.shields.io/github/workflow/status/disneystreaming/automated-cloud-advisor/Build?logo=github&cache_seconds=86400">
   </a>
   <a href="https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3ADocs">
-    <img alt="Docs" src="https://github.com/disneystreaming/automated-cloud-advisor/workflows/Docs/badge.svg">
+    <img alt="Docs" src="https://img.shields.io/github/workflow/status/disneystreaming/automated-cloud-advisor/Docs?logo=github&cache_seconds=86400&label=docs">
   </a>
   <a href="https://github.com/disneystreaming/automated-cloud-advisor/actions?query=workflow%3APublish">
-    <img alt="Docs" src="https://github.com/disneystreaming/automated-cloud-advisor/workflows/Publish/badge.svg">
+    <img alt="Docs" src="https://img.shields.io/github/workflow/status/disneystreaming/automated-cloud-advisor/Publish?logo=github&cache_seconds=86400&label=publish">
   </a>
 </p>
 <!-- NPM -->
 <p align="center">
   <a href="https://www.npmjs.com/package/automated-cloud-advisor">
-    <img alt="npm latest version" src="https://img.shields.io/npm/v/automated-cloud-advisor">
+    <img alt="npm latest version" src="https://img.shields.io/npm/v/automated-cloud-advisor?cache_seconds=86400">
   </a>
   <a href="https://www.npmjs.com/package/automated-cloud-advisor">
-    <img alt="dependencies Status" src="https://img.shields.io/david/disneystreaming/automated-cloud-advisor">
+    <img alt="dependencies Status" src="https://img.shields.io/david/disneystreaming/automated-cloud-advisor?cache_seconds=86400">
   </a>
   <a href="https://www.npmjs.com/package/automated-cloud-advisor">
-    <img alt="devDependencies Status" src="https://img.shields.io/david/dev/disneystreaming/automated-cloud-advisor?label=devDependencies">
+    <img alt="devDependencies Status" src="https://img.shields.io/david/dev/disneystreaming/automated-cloud-advisor?label=devDependencies&cache_seconds=86400">
   </a>
 </p>
 <!-- License -->
 <p align="center">
   <a href="https://github.com/semantic-release/semantic-release">
-    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
+    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?cache_seconds=86400">
   </a>
   <a href="https://opensource.org/licenses/Apache-2.0">
-    <img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
+    <img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?logo=apache&cache_seconds=86400">
   </a>
   <a href="https://cla-assistant.io/disneystreaming/automated-cloud-advisor">
     <img alt="CLA assistant" src="https://cla-assistant.io/readme/badge/disneystreaming/automated-cloud-advisor">
   </a>
     <a href="https://gitter.im/disneystreaming/automated-cloud-advisor">
-    <img alt="Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor" src="https://badges.gitter.im/Join%20Chat.svg">
+    <img alt="Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor" src="https://img.shields.io/badge/gitter-join_chat-informational?&logo=gitter&color=46bc99&logoColor=79ff97">
   </a>
 </p>
 <!-- Code Quality -->
 <p align="center">
   <a href="https://snyk.io/test/github/disneystreaming/automated-cloud-advisor?targetFile=package.json">
-    <img src="https://snyk.io/test/github/disneystreaming/automated-cloud-advisor/badge.svg?targetFile=package.json" alt="Known Vulnerabilities">
+    <img src="https://img.shields.io/snyk/vulnerabilities/npm/automated-cloud-advisor?&logo=snyk&logoColor=4b32c3&cache_seconds=86400" alt="Known Vulnerabilities">
   </a>
   <a href="https://sonarcloud.io/dashboard?id=disneystreaming_automated-cloud-advisor">
     <img alt="Sonar Quality" src="https://sonarcloud.io/api/project_badges/measure?project=disneystreaming_automated-cloud-advisor&metric=alert_status">
   </a>
-<a href="https://codecov.io/gh/disneystreaming/automated-cloud-advisor">
-  <img src="https://codecov.io/gh/disneystreaming/automated-cloud-advisor/branch/master/graph/badge.svg" />
-</a>
+  <a href="https://codecov.io/gh/disneystreaming/automated-cloud-advisor">
+    <img src="https://img.shields.io/codecov/c/github/disneystreaming/automated-cloud-advisor?logo=codecov&cache_seconds=86400"/>
+  </a>
   <a href="http://standardjs.com">
-    <img alt="js-standard-style" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg">
+    <img alt="js-standard-style" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?logo=eslint&logoColor=4b32c3&cache_seconds=86400">
   </a>
 </p>
 
