@@ -51,7 +51,7 @@
     <img alt="CLA assistant" src="https://cla-assistant.io/readme/badge/disneystreaming/automated-cloud-advisor">
   </a>
     <a href="https://gitter.im/disneystreaming/automated-cloud-advisor">
-    <img alt="Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor" src="https://img.shields.io/badge/gitter-join_chat-informational?&logo=gitter&color=46bc99&logoColor=79ff97">
+    <img alt="Join the chat at https://gitter.im/disneystreaming/automated-cloud-advisor" src="https://img.shields.io/badge/gitter-join_chat-informational?&logo=gitter&color=46bc99&logoColor=79ff97&cache_seconds=86400">
   </a>
 </p>
 <!-- Code Quality -->
