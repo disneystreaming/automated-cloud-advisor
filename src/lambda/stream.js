@@ -6,7 +6,7 @@ const AWS = require('aws-sdk')
 const TYPES = {
   S: (val) => val,
   N: (val) => Number(val),
-  B: (val) => Boolean(val)
+  BOOL: (val) => Boolean(val)
 }
 
 /**
