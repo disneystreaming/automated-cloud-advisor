@@ -1,3 +1,10 @@
+### [1.1.12](https://github.com/disneystreaming/automated-cloud-advisor/compare/v1.1.11...v1.1.12) (2020-09-23)
+
+
+### Bug Fixes
+
+* dynamodb boolean type ([01ba008](https://github.com/disneystreaming/automated-cloud-advisor/commit/01ba0086af27a8e8ae6747011ff4f0cadaa66eff))
+
 ### [1.1.11](https://github.com/disneystreaming/automated-cloud-advisor/compare/v1.1.10...v1.1.11) (2020-09-21)
 
 ### [1.1.10](https://github.com/disneystreaming/automated-cloud-advisor/compare/v1.1.9...v1.1.10) (2020-09-21)
