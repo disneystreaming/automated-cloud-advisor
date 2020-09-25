@@ -1,3 +1,5 @@
+### [1.1.14](https://github.com/disneystreaming/automated-cloud-advisor/compare/v1.1.13...v1.1.14) (2020-09-25)
+
 ### [1.1.13](https://github.com/disneystreaming/automated-cloud-advisor/compare/v1.1.12...v1.1.13) (2020-09-25)
 
 ### [1.1.12](https://github.com/disneystreaming/automated-cloud-advisor/compare/v1.1.11...v1.1.12) (2020-09-23)
