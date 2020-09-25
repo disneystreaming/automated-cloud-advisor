@@ -73,7 +73,7 @@
 <h2 align="center">💬 Motivation 💬</h2>
 
 <p align="center">
-  Automated Cloud Advisor is a extensible tool that aims at facilitating cost optimization in AWS, by collecting data for resources that are under utilized. In addition, this is a great learning tool for new DevOps/Cloud engineers that want to start automating things in AWS.
+  Automated Cloud Advisor is an extensible tool that aims at facilitating cost optimization in AWS, by collecting data for resources that are under utilized. In addition, this is a great learning tool for new DevOps/Cloud engineers that want to start automating things in AWS.
   </br></br>
   The tool is deployed as a set of cloudformation stacks that comprise the data collection and the data can be displayed in a Kibana dashboard.
 </p>
