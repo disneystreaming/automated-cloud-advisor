@@ -12,7 +12,7 @@
   <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/issues/">
     <img alt="Issues" src="https://img.shields.io/github/issues/disneystreaming/automated-cloud-advisor.svg?logo=github">
   </a>
-  <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/pull/">
+  <a href="https://GitHub.com/disneystreaming/automated-cloud-advisor/pulls/">
     <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/disneystreaming/automated-cloud-advisor.svg?logo=github">
 </p>
 <!-- Workflow -->
