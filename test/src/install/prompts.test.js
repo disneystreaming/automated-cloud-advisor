@@ -20,12 +20,12 @@ describe('When invoking when conditions for the prompts', () => {
     })
   })
 
-  // describe(`When invoking the addWhen`, () => {
-  //   it('Then it should return function value', async () => {
-  //     const { addWhen } = require('../../../src/install/prompts')
-  //     const {when: func} = addWhen.allStacksOrServerless({})
-  //     response = func({stacks: 'serverless'})
-  //     expect(response).toBe(true)
-  //   })
-  // })
+  describe('When invoking the addWhen', () => {
+    it('Then it should return function value', async () => {
+      const { addWhen } = require('../../../src/install/prompts')
+      const { when: func } = addWhen.allStacksOrServerless({})
+      response = func({ stacks: 'serverless' })
+      expect(response).toBe(true)
+    })
+  })
 })

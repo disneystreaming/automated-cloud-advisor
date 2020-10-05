@@ -21,7 +21,8 @@ const tuple = {
 const when = {
   hasProfile: answers => answers.hasProfile,
   allStacks: answers => answers.stacks === 'all',
-  allServerless: answers => answers.stacks === 'serverless'
+  allServerless: answers => answers.stacks === 'serverless',
+  both: answers => answers.stacks === 'all' || answers.stacks === 'serverless'
 }
 
 // Add when conditions to prompt
@@ -31,7 +32,7 @@ const addWhen = {
     ...prompt
   }),
   allStacksOrServerless: (prompt) => ({
-    when: when.allStacks || when.allServerless,
+    when: when.both,
     ...prompt
   }),
   allStacks: (prompt) => ({
