@@ -48,7 +48,6 @@
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.3.0",
     "jest": "^26.0.1",
-    "lint": "^0.7.0",
     "semantic-release": "^17.1.2"
   },
   "eslintConfig": {
@@ -76,11 +75,11 @@
     "collectCoverage": true,
     "silent": true,
     "collectCoverageFrom": [
-      "src/lambda/*.js"
+      "src/**/*.js"
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 100,
+        "branches": 94,
         "functions": 100,
         "lines": 100,
         "statements": 100

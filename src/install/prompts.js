@@ -135,5 +135,7 @@ const prompts = [
 ]
 
 module.exports = {
-  prompts
+  prompts,
+  when,
+  addWhen
 }
