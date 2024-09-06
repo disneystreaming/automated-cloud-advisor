@@ -29,7 +29,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "inquirer": "^7.2.0"
+    "inquirer": "^9.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
